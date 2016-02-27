@@ -1,0 +1,7 @@
+Player: init engine
+Direct3D:
+    Version:  Direct3D 9.0c [igdumd32.dll 8.15.10.2752]
+    Renderer: Intel(R) HD Graphics 3000
+    Vendor:   Intel
+    VRAM:     1806 MB
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
