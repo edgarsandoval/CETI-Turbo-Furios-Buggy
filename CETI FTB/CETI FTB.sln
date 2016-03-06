@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{83F4DFAC-E310-F875-AED4-104DBAF203FB}") = "CETI FTB", "Assembly-CSharp-firstpass.csproj", "{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}"
+EndProject
+Project("{83F4DFAC-E310-F875-AED4-104DBAF203FB}") = "CETI FTB", "Assembly-CSharp-Editor.csproj", "{42913053-3E9F-9E8C-6E98-B0C57D9EE360}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42913053-3E9F-9E8C-6E98-B0C57D9EE360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42913053-3E9F-9E8C-6E98-B0C57D9EE360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42913053-3E9F-9E8C-6E98-B0C57D9EE360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42913053-3E9F-9E8C-6E98-B0C57D9EE360}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
