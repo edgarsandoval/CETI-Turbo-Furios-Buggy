@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="CETI Race" company="ElEdgar &amp; asoc. Satanas Inc. " webLink="http://" view-date="2016-01-25" view-index="0" gantt-divider-location="441" resource-divider-location="300" version="2.7.2" locale="es">
+<?xml version="1.0" encoding="UTF-8"?><project name="CETI Race" company="ElEdgar &amp; asoc. Satanas Inc. " webLink="http://" view-date="2016-01-04" view-index="0" gantt-divider-location="441" resource-divider-location="300" version="2.7" locale="es">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="52" order="0"/>
@@ -8,8 +8,8 @@
         <option id="color.recent"><![CDATA[#ffffff #0033cc #0000cc #0033ff #0000ff #000000]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nombre" width="70" order="0"/>
-        <field id="1" name="Función" width="29" order="1"/>
+        <field id="0" name="Nombre" width="50" order="0"/>
+        <field id="1" name="Función" width="49" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -35,7 +35,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="40" name="Investigacion" color="#0000cc" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2016-02-08" duration="71" complete="0" priority="2" expand="false">
+        <task id="40" name="Investigacion" color="#0000cc" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2016-02-08" duration="71" complete="0" priority="2" expand="true">
             <task id="43" name="Instalación y uso basico Unity" color="#000000" meeting="false" start="2016-02-08" duration="1" complete="0" expand="true"/>
             <task id="47" name="Creacion de objetos" color="#000000" meeting="false" start="2016-02-09" duration="1" complete="0" expand="true"/>
             <task id="56" name="Creacion de menus" color="#000000" meeting="false" start="2016-02-29" duration="1" complete="0" expand="true"/>
@@ -45,26 +45,27 @@
             <task id="84" name="Guardado de partidas" meeting="false" start="2016-04-17" duration="1" complete="0" expand="true"/>
             <task id="86" name="Conexion entre cliente/servidor" meeting="false" start="2016-04-18" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="50" name="Diseño" color="#0033ff" meeting="false" start="2016-02-09" duration="57" complete="0" expand="true">
+        <task id="50" name="Diseño" color="#0033ff" meeting="false" start="2016-02-09" duration="89" complete="0" expand="true">
             <task id="52" name="Creacion de mapa" meeting="false" start="2016-02-09" duration="4" complete="0" expand="true"/>
-            <task id="53" name="Diseño de vehiculos y personajes principales" color="#000000" meeting="false" start="2016-02-13" duration="16" complete="0" expand="true">
-                <notes><![CDATA[Posibles cambios en la duración debido a la dificultad/facilidad de diseño de modelos]]></notes>
-            </task>
             <task id="60" name="Diseño menu principal y secundarios" meeting="false" start="2016-02-29" duration="3" complete="0" expand="true"/>
             <task id="61" name="Diseñar obstaculos" meeting="false" start="2016-03-03" duration="3" complete="0" expand="true"/>
-            <task id="78" name="Diseñar &quot;armas&quot; de carrera" color="#000000" meeting="false" start="2016-04-01" duration="5" complete="0" expand="true"/>
+            <task id="78" name="Diseñar &quot;armas&quot; de carrera" color="#000000" meeting="false" start="2016-04-06" duration="16" complete="0" expand="true"/>
+            <task id="101" name="Diseño de vehiculos y personajes principales" color="#000000" meeting="false" start="2016-04-22" duration="16" complete="0" expand="true">
+                <notes><![CDATA[Posibles cambios en la duración debido a la dificultad/facilidad de diseño de modelos]]></notes>
+            </task>
         </task>
-        <task id="62" name="Implementacion" color="#0033ff" meeting="false" start="2016-03-06" duration="66" complete="0" expand="true">
-            <task id="64" name="Movimientos personaje y camara" color="#000000" meeting="false" start="2016-03-06" duration="2" complete="0" expand="true"/>
-            <task id="66" name="Programar aceleración y colisiones" color="#000000" meeting="false" start="2016-03-08" duration="4" complete="0" expand="true"/>
-            <task id="71" name="Programar secuencia imagenes" meeting="false" start="2016-03-12" duration="4" complete="0" expand="true"/>
-            <task id="73" name="Pruebas basicas y correcciones" color="#000000" meeting="false" start="2016-03-16" duration="7" complete="0" expand="true"/>
-            <task id="75" name="Programar circuitos y seleccion" meeting="false" start="2016-03-23" duration="9" complete="0" expand="true"/>
+        <task id="62" name="Implementacion" color="#0033ff" meeting="false" start="2016-01-04" duration="128" complete="0" expand="true">
+            <task id="64" name="Movimientos personaje y camara" color="#000000" meeting="false" start="2016-03-17" duration="2" complete="0" expand="true"/>
+            <task id="66" name="Programar aceleración y colisiones" color="#000000" meeting="false" start="2016-03-18" duration="5" complete="0" expand="true"/>
+            <task id="110" name="Programación  de menu principal" color="#8cb6ce" meeting="false" start="2016-03-22" duration="1" complete="0" expand="true"/>
+            <task id="71" name="Programar secuencia imagenes" color="#8cb6ce" meeting="false" start="2016-03-23" duration="1" complete="0" expand="true"/>
+            <task id="73" name="Pruebas basicas y correcciones" color="#000000" meeting="false" start="2016-03-23" duration="1" complete="0" expand="true"/>
+            <task id="75" name="Programar circuitos y seleccion" meeting="false" start="2016-01-04" duration="1" complete="0" expand="true"/>
             <task id="76" name="Programar carreras" meeting="false" start="2016-04-01" duration="1" complete="0" expand="true"/>
             <task id="80" name="Programar &quot;armas&quot; carrera" meeting="false" start="2016-04-05" duration="8" complete="0" expand="true"/>
             <task id="83" name="Pruebas &quot;armas&quot;" meeting="false" start="2016-04-13" duration="4" complete="0" expand="true"/>
             <task id="85" name="Programar guardado de partida" meeting="false" start="2016-04-17" duration="1" complete="0" expand="true"/>
-            <task id="88" name="Programar modo multijugador" meeting="false" start="2016-04-18" duration="8" complete="0" expand="true">
+            <task id="88" name="Programar modo multijugador" meeting="false" start="2016-04-18" duration="8" complete="0" expand="false">
                 <task id="87" name="Programar conexion basica de multijugador" meeting="false" start="2016-04-18" duration="1" complete="0" expand="true"/>
                 <task id="89" name="Programar selector personaje y pista" meeting="false" start="2016-04-19" duration="2" complete="0" expand="true"/>
                 <task id="91" name="Programar carreras" meeting="false" start="2016-04-25" duration="1" complete="0" expand="true"/>
@@ -88,15 +89,14 @@
         <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd12" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="229" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="104" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="104" visible="true"/>
         <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd13" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="221" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="101" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="100" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
