@@ -53,22 +53,22 @@ GUI.skin.button.font = pauseMenuFont;
 		//the user clicks on the "Change Graphics Quality" Button, and then dissapear when they click
 		//on it again....
 		if(showGraphicsDropDown == true){
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 ,250,50), "Fastest")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 ,250,50), "Horribles")){
 				QualitySettings.currentLevel = QualityLevel.Fastest;
 			}
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 50,250,50), "Fast")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 50,250,50), "Bajos")){
 				QualitySettings.currentLevel = QualityLevel.Fast;
 			}
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 100,250,50), "Simple")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 100,250,50), "Medios")){
 				QualitySettings.currentLevel = QualityLevel.Simple;
 			}
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 150,250,50), "Good")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 150,250,50), "Normales")){
 				QualitySettings.currentLevel = QualityLevel.Good;
 			}
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 200,250,50), "Beautiful")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 200,250,50), "Buenos")){
 				QualitySettings.currentLevel = QualityLevel.Beautiful;
 			}
-			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 250,250,50), "Fantastic")){
+			if(GUI.Button(Rect(Screen.width /2 + 150,Screen.height /2 + 250,250,50), "Excelentes")){
 				QualitySettings.currentLevel = QualityLevel.Fantastic;
 			}
 			

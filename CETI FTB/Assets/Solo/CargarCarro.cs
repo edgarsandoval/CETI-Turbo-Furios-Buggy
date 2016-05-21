@@ -12,15 +12,15 @@ public class CargarCarro : MonoBehaviour {
 	public GameObject Morado;
 	public GameObject Negro;
 	public int kartSelected = 0;
+	public WheelCollider wc;
 
 	void awake () {
-		GameObject.DontDestroyOnLoad (this.gameObject);
+		//GameObject.DontDestroyOnLoad (this.gameObject);
 	}
 
 	void Start ()
 	{
 		kartSelected =  PlayerPrefs.GetInt ("kart");
-		awake ();
 		switch(kartSelected)
 		{
 		case 0:

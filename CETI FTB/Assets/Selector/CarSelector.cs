@@ -15,7 +15,7 @@ public class CarSelector : MonoBehaviour
 
 	public void Seleccionar() {
 		PlayerPrefs.SetInt ("kart", kartSelected);
-		Application.LoadLevel("Mapa");
+		Application.LoadLevel("Menu");
 	}
 
 	public void Regresar() {
@@ -24,8 +24,9 @@ public class CarSelector : MonoBehaviour
 
 	void start()
 	{
-		
-		kartSelected =  PlayerPrefs.GetInt ("kart");
+		if (PlayerPrefs.HasKey("kart")) {
+			kartSelected =  PlayerPrefs.GetInt ("kart");
+		}
 		switch(kartSelected)
 		{
 			case 0:

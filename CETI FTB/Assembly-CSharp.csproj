@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Karts\Scripts\Movimiento.cs" />
      <Compile Include="Assets\Selector\CarSelector.cs" />
      <Compile Include="Assets\Solo\CargarCarro.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
