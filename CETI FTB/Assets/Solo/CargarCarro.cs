@@ -12,7 +12,6 @@ public class CargarCarro : MonoBehaviour {
 	public GameObject Morado;
 	public GameObject Negro;
 	public int kartSelected = 0;
-	public WheelCollider wc;
 
 	void awake () {
 		//GameObject.DontDestroyOnLoad (this.gameObject);
