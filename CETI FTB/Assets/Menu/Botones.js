@@ -1,6 +1,6 @@
 ﻿public function BotonJugar()
 {
-	Application.LoadLevel("Mapa");
+	Application.LoadLevel("SelectorMapa");
 }
 
 public function BotonPersonaje()

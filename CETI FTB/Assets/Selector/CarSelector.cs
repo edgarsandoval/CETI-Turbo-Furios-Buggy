@@ -1,294 +1,56 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class CarSelector : MonoBehaviour
 {
-	public GameObject Rojo;
-	public GameObject Azul;
-	public GameObject Amarillo;
-	public GameObject Verde;
-	public GameObject Blanco;
-	public GameObject Rosa;
-	public GameObject Morado;
-	public GameObject Negro;
+	public GameObject[] kart;
 	public int kartSelected = 0; 
+	public string nombre;
+	private InputField txtNombre;
 
-	public void Seleccionar() {
+	void Start()
+	{
+		if (PlayerPrefs.HasKey("kart"))
+			kartSelected =  PlayerPrefs.GetInt ("kart");
+
+		showSelectedKart ();
+	}
+
+	public void showSelectedKart()
+	{
+		for (int i = 0; i < kart.Length; i++)
+			if (i == kartSelected)
+				kart [i].SetActive (true);
+			else
+				kart [i].SetActive (false);
+	}
+
+	public void Seleccionar()
+	{
 		PlayerPrefs.SetInt ("kart", kartSelected);
 		Application.LoadLevel("Menu");
 	}
 
-	public void Regresar() {
-		Application.LoadLevel("Menu");
-	}
-
-	void start()
+	public void Regresar()
 	{
-		if (PlayerPrefs.HasKey("kart")) {
-			kartSelected =  PlayerPrefs.GetInt ("kart");
-		}
-		switch(kartSelected)
-		{
-			case 0:
-			Rojo.SetActive(true);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 1:
-			Rojo.SetActive(false);
-			Azul.SetActive(true);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 2:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(true);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 3:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(true);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 4:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(true);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 5:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(true);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 6:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(true);
-			Negro.SetActive(false);
-				break;
-			case 7:
-			Rojo.SetActive (false);
-			Azul.SetActive (false);
-			Amarillo.SetActive (false);
-			Verde.SetActive (false);
-			Blanco.SetActive (false);
-			Rosa.SetActive (false);
-			Morado.SetActive (false);
-			Negro.SetActive (true);
-				break;
-		}
+		Application.LoadLevel("Menu");
 	}
 
 	public void next()
 	{
-		kartSelected++;
-		if (kartSelected == 8)
-			kartSelected = 0;
-		switch(kartSelected)
-		{
-			case 0:
-			Rojo.SetActive(true);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 1:
-			Rojo.SetActive(false);
-			Azul.SetActive(true);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 2:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(true);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 3:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(true);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 4:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(true);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 5:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(true);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-				break;
-			case 6:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(true);
-			Negro.SetActive(false);
-				break;
-		case 7:
-			Rojo.SetActive (false);
-			Azul.SetActive (false);
-			Amarillo.SetActive (false);
-			Verde.SetActive (false);
-			Blanco.SetActive (false);
-			Rosa.SetActive (false);
-			Morado.SetActive (false);
-			Negro.SetActive (true);
-				break;
-		}
+		kartSelected = (kartSelected + 1 + kart.Length) % kart.Length;
+		showSelectedKart ();
 	}
 
 	public void prev()
 	{
-		kartSelected--;
-		if (kartSelected == -1)
-			kartSelected = 7;
-		switch(kartSelected)
-		{
-		case 0:
-			Rojo.SetActive(true);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 1:
-			Rojo.SetActive(false);
-			Azul.SetActive(true);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 2:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(true);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 3:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(true);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 4:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(true);
-			Rosa.SetActive(false);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 5:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(true);
-			Morado.SetActive(false);
-			Negro.SetActive(false);
-			break;
-		case 6:
-			Rojo.SetActive(false);
-			Azul.SetActive(false);
-			Amarillo.SetActive(false);
-			Verde.SetActive(false);
-			Blanco.SetActive(false);
-			Rosa.SetActive(false);
-			Morado.SetActive(true);
-			Negro.SetActive(false);
-			break;
-		case 7:
-			Rojo.SetActive (false);
-			Azul.SetActive (false);
-			Amarillo.SetActive (false);
-			Verde.SetActive (false);
-			Blanco.SetActive (false);
-			Rosa.SetActive (false);
-			Morado.SetActive (false);
-			Negro.SetActive (true);
-			break;
-		}
+		kartSelected = (kartSelected - 1 + kart.Length) % kart.Length;
+		showSelectedKart ();
+	}
+
+	public void guardarNombre(string s)
+	{
+		Debug.Log (s);
 	}
 }

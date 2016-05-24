@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Karts\Scripts\Movimiento.cs" />
      <Compile Include="Assets\Selector\CarSelector.cs" />
+     <Compile Include="Assets\SelectorMapa\MapSelector.cs" />
      <Compile Include="Assets\Solo\CargarCarro.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
