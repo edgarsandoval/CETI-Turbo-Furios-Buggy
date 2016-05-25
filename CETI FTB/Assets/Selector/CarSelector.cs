@@ -7,7 +7,7 @@ public class CarSelector : MonoBehaviour
 	public GameObject[] kart;
 	public int kartSelected = 0; 
 	public string nombre;
-	private InputField txtNombre;
+	//private InputField txtNombre;
 
 	void Start()
 	{

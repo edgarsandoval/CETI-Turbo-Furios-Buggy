@@ -3,6 +3,44 @@ guid: ce41f152f1c11144e88b7401f2805371
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: BezierCurve
+    100002: BezierCurve_001
+    100004: NurbsCircle
+    100006: RoadBody
+    100008: RoadBody_2
+    100010: RoadCollider
+    100012: RoadCollider_2
+    100014: RoadWallCollider
+    100016: RoadWallCollider_2
+    100018: //RootNode
+    400000: BezierCurve
+    400002: BezierCurve_001
+    400004: NurbsCircle
+    400006: RoadBody
+    400008: RoadBody_2
+    400010: RoadCollider
+    400012: RoadCollider_2
+    400014: RoadWallCollider
+    400016: RoadWallCollider_2
+    400018: //RootNode
+    2300000: BezierCurve
+    2300002: BezierCurve_001
+    2300004: NurbsCircle
+    2300006: RoadBody
+    2300008: RoadBody_2
+    2300010: RoadCollider
+    2300012: RoadCollider_2
+    2300014: RoadWallCollider
+    2300016: RoadWallCollider_2
+    3300000: BezierCurve
+    3300002: BezierCurve_001
+    3300004: NurbsCircle
+    3300006: RoadBody
+    3300008: RoadBody_2
+    3300010: RoadCollider
+    3300012: RoadCollider_2
+    3300014: RoadWallCollider
+    3300016: RoadWallCollider_2
     4300000: BezierCurve_001
     4300002: BezierCurve
     4300004: NurbsCircle
@@ -12,6 +50,8 @@ ModelImporter:
     4300012: RoadWallCollider
     4300014: RoadBody
     4300016: RoadCollider
+    7400000: Default Take
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

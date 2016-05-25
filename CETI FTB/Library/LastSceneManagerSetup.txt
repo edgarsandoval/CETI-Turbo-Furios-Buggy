@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Selector/Selector.unity
-=======
-- path: Assets/Menu/menu.unity
->>>>>>> fe0100e2e41a742a3f1022caa45542f0bae94e6a
+- path: Assets/Solo/Mapa.unity
   isLoaded: 1
   isActive: 1

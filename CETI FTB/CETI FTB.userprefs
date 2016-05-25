@@ -1,9 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Selector\CarSelector.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Karts\Scripts\SpiderPlayer.js">
     <Files>
-      <File FileName="Assets\SelectorMapa\MapSelector.cs" Line="10" Column="15" />
-      <File FileName="Assets\Selector\CarSelector.cs" Line="6" Column="2" />
+      <File FileName="Assets\Karts\Scripts\SpiderPlayer.js" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

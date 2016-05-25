@@ -3,11 +3,35 @@ guid: b6284daafd7ef694893cb9b2db2937df
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Icosphere
+    100002: NurbsCircle
+    100004: RoadBody
+    100006: RoadCollider
+    100008: RoadWallCollider
+    100010: //RootNode
+    400000: Icosphere
+    400002: NurbsCircle
+    400004: RoadBody
+    400006: RoadCollider
+    400008: RoadWallCollider
+    400010: //RootNode
+    2300000: Icosphere
+    2300002: NurbsCircle
+    2300004: RoadBody
+    2300006: RoadCollider
+    2300008: RoadWallCollider
+    3300000: Icosphere
+    3300002: NurbsCircle
+    3300004: RoadBody
+    3300006: RoadCollider
+    3300008: RoadWallCollider
     4300000: Icosphere
     4300002: NurbsCircle
     4300004: RoadWallCollider
     4300006: RoadBody
     4300008: RoadCollider
+    7400000: Default Take
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
