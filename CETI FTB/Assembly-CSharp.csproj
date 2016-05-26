@@ -48,7 +48,10 @@
      <Compile Include="Assets\Karts\Scripts\Movimiento.cs" />
      <Compile Include="Assets\Selector\CarSelector.cs" />
      <Compile Include="Assets\SelectorMapa\MapSelector.cs" />
-     <Compile Include="Assets\Solo\CargarCarro.cs" />
+     <Compile Include="Assets\Solo\Scripts\CargarCarro.cs" />
+     <Compile Include="Assets\Solo\Scripts\Carreras.cs" />
+     <Compile Include="Assets\Solo\Scripts\Checkpoint.cs" />
+     <Compile Include="Assets\Solo\Scripts\Vueltas.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
