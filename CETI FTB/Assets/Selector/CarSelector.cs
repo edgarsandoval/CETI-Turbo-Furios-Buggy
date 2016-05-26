@@ -6,14 +6,15 @@ public class CarSelector : MonoBehaviour
 {
 	public GameObject[] kart;
 	public int kartSelected = 0; 
-	public string nombre;
-	//private InputField txtNombre;
+	public GUIText txtNombre;
 
 	void Start()
 	{
 		if (PlayerPrefs.HasKey("kart"))
 			kartSelected =  PlayerPrefs.GetInt ("kart");
-
+		if (PlayerPrefs.HasKey ("nombre")) 
+			txtNombre.text = PlayerPrefs.GetString ("nombre");
+		
 		showSelectedKart ();
 	}
 
@@ -49,8 +50,10 @@ public class CarSelector : MonoBehaviour
 		showSelectedKart ();
 	}
 
-	public void guardarNombre(string s)
+	public void guardarNombre()
 	{
+		string s = txtNombre.text;
+		PlayerPrefs.SetString ("nombre", s);
 		Debug.Log (s);
 	}
 }

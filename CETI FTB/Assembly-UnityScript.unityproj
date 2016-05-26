@@ -48,7 +48,7 @@
      <Compile Include="Assets\Karts\Scripts\SpiderPlayer.js" />
      <Compile Include="Assets\Menu\AjusteGrafico.js" />
      <Compile Include="Assets\Menu\Botones.js" />
-     <Compile Include="Assets\Solo\PauseMenu.js" />
+     <Compile Include="Assets\Solo\Scripts\PauseMenu.js" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
