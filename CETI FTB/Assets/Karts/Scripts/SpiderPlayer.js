@@ -6,11 +6,10 @@ function FixedUpdate () {
 	var x:Number = Input.GetAxis("Horizontal");
 	var y:Number = Input.GetAxis("Vertical");
 	
-	if (HitTestWithRoad()) {
+	if (HitTestWithRoad()) {}
 	this.GetComponent.<Rigidbody>().velocity += y * transform.forward * forwardSpeed;
 		
 	this.GetComponent.<Rigidbody>().AddTorque(transform.up * x * steerAngle, ForceMode.Acceleration);
-	}
 }
 
 public var distance:float = 2.0;
