@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Solo/Mapa.unity
+- path: Assets/Menu/menu.unity
   isLoaded: 1
   isActive: 1

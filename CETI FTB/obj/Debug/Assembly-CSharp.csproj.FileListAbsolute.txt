@@ -20,3 +20,5 @@ C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\Temp\bin\Debug\UnityEn
 C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\Temp\bin\Debug\UnityEngine.Networking.xml
 C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.dll
 C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Edgar Sandoval\Documents\GitHub\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Edgar Sandoval\Documents\GitHub\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.dll

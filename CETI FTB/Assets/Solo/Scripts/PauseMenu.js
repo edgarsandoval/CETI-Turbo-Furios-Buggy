@@ -7,7 +7,6 @@ function Start(){
 	pauseEnabled = false;
 	Time.timeScale = 1;
 	AudioListener.volume = 1;
-	Cursor.visible = false;
 }
 
 function Update(){
@@ -102,6 +101,5 @@ public function menuPausa()
 		pauseEnabled = true;
 		AudioListener.volume = 0;
 		Time.timeScale = 0;
-		Cursor.visible = true;
 	}
 }
