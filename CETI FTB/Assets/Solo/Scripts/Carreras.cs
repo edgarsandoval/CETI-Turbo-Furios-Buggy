@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Carreras : MonoBehaviour {
 	public int pista = 1;
 	public int posicion;
 	public static int vuelta = 0;
-	public GameObject texto;
+	public Text Ganador; 
+	public Text Perdedor;
 
 	void Start () {
-		pista = PlayerPrefs.GetInt ("mapa");	
+		pista = PlayerPrefs.GetInt ("mapa");
 	}
 	
 	void Update (){
@@ -18,7 +20,7 @@ public class Carreras : MonoBehaviour {
 
 	public void gano()
 	{
-		if (posicion == 1 && vuelta == 3) {
+		if (posicion == 1) {
 			switch (pista) {
 			case 1:
 				PlayerPrefs.SetInt ("progreso", 1);
@@ -30,8 +32,18 @@ public class Carreras : MonoBehaviour {
 				PlayerPrefs.SetInt ("progreso", 3);
 				break;
 			}
+			Ganador.enabled = true;
+			timer (5); //Corregir ¬¬
+			vuelta = 0;
+			Application.LoadLevel ("SelectorMapa");
+		} else {
+			Perdedor.text = "Quedaste en " + posicion + " lugar";
+			Perdedor.enabled = true;
+			Application.LoadLevel ("SelectorMapa");
 		}
-		Application.LoadLevel ("SelectorMapa");
 	}
-		
+
+	private IEnumerator timer(int tiempo) {
+		yield return new WaitForSeconds (tiempo);
+	}
 }
