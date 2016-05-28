@@ -19,6 +19,14 @@ public class CargarCarro : MonoBehaviour {
 
 	void Start ()
 	{
+
+		GameObject go = GameObject.Find ("Spawn Player");
+		if (go == null)
+		{
+			go = new GameObject ("Span Player");
+		}
+
+
 		kartSelected =  PlayerPrefs.GetInt ("kart");
 		switch(kartSelected)
 		{

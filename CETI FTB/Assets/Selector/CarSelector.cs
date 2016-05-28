@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CarSelector : MonoBehaviour
 {
 	public GameObject[] kart;
 	public int kartSelected = 0; 
-	public GUIText txtNombre;
+	public InputField txtNombre;
 
 	void Start()
 	{
@@ -54,6 +55,5 @@ public class CarSelector : MonoBehaviour
 	{
 		string s = txtNombre.text;
 		PlayerPrefs.SetString ("nombre", s);
-		Debug.Log (s);
 	}
 }
