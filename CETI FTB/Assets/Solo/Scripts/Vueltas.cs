@@ -6,7 +6,6 @@ public class Vueltas : MonoBehaviour {
 	public Text txt;
 
 	void Start () {
-		txt = GetComponent<Text> ();
 		txt.text = "Vuelta: 1";
 	}
 

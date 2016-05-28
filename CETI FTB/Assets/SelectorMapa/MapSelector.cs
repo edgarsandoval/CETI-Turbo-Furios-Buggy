@@ -22,6 +22,7 @@ public class MapSelector : MonoBehaviour
 			segundoNivel.interactable = true;
 			break;
 		case 2:
+		case 3:
 			segundoNivel.interactable = true;
 			tercerNivel.interactable = true;
 			break;
