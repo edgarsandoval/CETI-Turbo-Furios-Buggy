@@ -10,14 +10,13 @@ public class CargarCarro : MonoBehaviour {
 	private Vector3 spawnPoint;
 	private int mapa;
 
-	void awake () {
-		//GameObject.DontDestroyOnLoad (this.gameObject);
-	}
-
 	void Start ()
 	{
 		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
+		for (int i = 0; i < kart.Length; i++)
+			kart [i].SetActive (false);
+		kart [kartSelected].SetActive (true);
 		switch (mapa)
 		{
 			case 1:
@@ -120,5 +119,4 @@ public class CargarCarro : MonoBehaviour {
 
 		return copia;
 	}
-
 }

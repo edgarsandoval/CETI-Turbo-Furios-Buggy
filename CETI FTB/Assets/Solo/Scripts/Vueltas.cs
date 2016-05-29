@@ -6,7 +6,7 @@ public class Vueltas : MonoBehaviour {
 	public Text txt;
 
 	void Start () {
-		txt.text = "Vuelta: 1";
+		txt.text = "Vuelta: 0";
 	}
 
 	void Update () {

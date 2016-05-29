@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Armas\Trigger.cs" />
-     <Compile Include="Assets\Karts\Scripts\Movimiento.cs" />
      <Compile Include="Assets\Selector\CarSelector.cs" />
      <Compile Include="Assets\SelectorMapa\MapSelector.cs" />
      <Compile Include="Assets\Solo\Scripts\CargarCarro.cs" />
