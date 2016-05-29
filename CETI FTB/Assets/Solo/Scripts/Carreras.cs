@@ -6,14 +6,15 @@ public class Carreras : MonoBehaviour {
 	public int pista = 1;
 	public int posicion;
 	public static int vuelta = 0;
-	public Text Ganador; 
-	public Text Perdedor;
+	public GameObject Ganador; 
+	public GameObject Perdedor;
+	public GameObject Boton;
 
 	void Start () {
 		pista = PlayerPrefs.GetInt ("mapa");
 	}
 	
-	void Update (){
+	void Update () {
 		if (vuelta == 3)
 			gano ();
 	}
@@ -32,18 +33,17 @@ public class Carreras : MonoBehaviour {
 				PlayerPrefs.SetInt ("progreso", 3);
 				break;
 			}
-			Ganador.enabled = true;
-			timer (5); //Corregir ¬¬
+			Ganador.SetActive (true);
 			vuelta = 0;
-			Application.LoadLevel ("SelectorMapa");
 		} else {
-			Perdedor.text = "Quedaste en " + posicion + " lugar";
-			Perdedor.enabled = true;
-			Application.LoadLevel ("SelectorMapa");
+			Text txt = Perdedor.GetComponent<Text> ();
+			txt.text = "Quedaste en " + posicion + " lugar";
+			Perdedor.SetActive (true);
 		}
+		Boton.SetActive (true);
 	}
 
-	private IEnumerator timer(int tiempo) {
-		yield return new WaitForSeconds (tiempo);
+	public void Continuar() {
+		Application.LoadLevel ("SelectorMapa");
 	}
 }
