@@ -16,8 +16,15 @@ public class CargarCarro : MonoBehaviour {
 
 	void Start ()
 	{
-		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
+		mapa = 1;
+		//mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
+
+		for (int i = 0; i < kart.Length; i++)
+			if (kartSelected == i)
+				kart [kartSelected].SetActive (true);
+			else
+				kart [i].SetActive (false);
 		switch (mapa)
 		{
 			case 1:
@@ -78,24 +85,10 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<MeshFilter> ();
 		go.GetComponent<MeshFilter> ().mesh = capsula.GetComponent<MeshFilter> ().mesh;
 
-		// Set Capsule Collider
-		go.AddComponent<CapsuleCollider>();
-		go.GetComponent<CapsuleCollider>().center = new Vector3 (0f, 0.6f, -0.1f);
-		go.GetComponent<CapsuleCollider> ().radius = 0.28f;
-		go.GetComponent<CapsuleCollider> ().height = 1;
-		go.GetComponent<CapsuleCollider> ().direction = 2;
+		// Set Character Collider
+		go.AddComponent<CharacterController>();
 
-		// Set Rigidbody
-		go.AddComponent<Rigidbody>();
-		go.GetComponent<Rigidbody> ().mass = 10;
-		go.GetComponent<Rigidbody> ().drag = 4;
-		go.GetComponent<Rigidbody> ().angularDrag = 6;
-		go.GetComponent<Rigidbody> ().useGravity = false;
-		go.GetComponent<Rigidbody> ().isKinematic = false;
-		go.GetComponent<Rigidbody> ().collisionDetectionMode = CollisionDetectionMode.Discrete;
-
-		// Add Spider Player.js w/values
-		CopyComponent (carro.GetComponent("SpiderPlayer"), go);
+		// Add IA w/values
 
 		Destroy (capsula);
 

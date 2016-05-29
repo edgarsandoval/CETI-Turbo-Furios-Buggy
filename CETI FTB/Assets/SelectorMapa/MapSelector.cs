@@ -8,7 +8,6 @@ public class MapSelector : MonoBehaviour
 	public Button primerNivel;
 	public Button segundoNivel;
 	public Button tercerNivel;
-	public InputField txtNombre;
 	private int mapas = 1;
 
 	void Start ()
@@ -32,6 +31,7 @@ public class MapSelector : MonoBehaviour
 	public void selecionarMapa(int mapa)
 	{
 		PlayerPrefs.SetInt ("mapa", mapa);
-		Application.LoadLevel ("Mapa");
+		PlayerPrefs.SetString ("nextScene", "Mapa");
+		Application.LoadLevel ("Transicion");
 	}
 }

@@ -1,6 +1,10 @@
+import UnityEngine.UI;
+
 var mainMenuSceneName : String;
 var pauseMenuFont : Font;
-private var pauseEnabled = false;			
+private var pauseEnabled = false;
+var loadingBar : Slider;
+var loadImage : GameObject;			
 
 function Start(){
 	QualitySettings.currentLevel = QualityLevel.Fast;
@@ -27,17 +31,23 @@ GUI.skin.button.font = pauseMenuFont;
 	if(pauseEnabled == true){
 		
 		//Crea la caja de fondo
-		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,200), "Menu de pausa");
+		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 150,250,200), "Menu de pausa");
 
 		//Crea el botón "Continuar"
-		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Continuar"))
+		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,50), "Continuar"))
 		{
 			pauseEnabled = true;
 			showGraphicsDropDown = false;
 			menuPausa();			
 		}
 
-		
+		//Crea el botón "Reiniciar"
+		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Reinicar Carrera"))
+		{
+			PlayerPrefs.SetString("nextScene", "Mapa");
+			Application.LoadLevel("Transicion");
+		}
+
 		//Crea el botón "Cambiar Calidad Gráfica"
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Cambiar calidad grafica")){
 			
