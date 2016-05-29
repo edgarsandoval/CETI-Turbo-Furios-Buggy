@@ -5,6 +5,7 @@ public class CargarCarro : MonoBehaviour {
 
 	public GameObject carro;
 	public GameObject[] kart;
+	public PathManager[] pistasIA;
 	public int kartSelected = 0;
 
 	private Vector3 spawnPoint;
@@ -12,21 +13,11 @@ public class CargarCarro : MonoBehaviour {
 
 	void Start ()
 	{
-		mapa = 1;
-		//mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
+		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
-<<<<<<< HEAD
 		for (int i = 0; i < kart.Length; i++)
 			kart [i].SetActive (false);
 		kart [kartSelected].SetActive (true);
-=======
-
-		for (int i = 0; i < kart.Length; i++)
-			if (kartSelected == i)
-				kart [kartSelected].SetActive (true);
-			else
-				kart [i].SetActive (false);
->>>>>>> origin/master
 		switch (mapa)
 		{
 			case 1:
@@ -91,7 +82,8 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<CharacterController>();
 
 		// Add IA w/values
-
+		hoMove.setPath (pistasIA[mapa - 1]);
+		go.AddComponent<hoMove>();
 		Destroy (capsula);
 
 		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -80, 0)) as GameObject;
