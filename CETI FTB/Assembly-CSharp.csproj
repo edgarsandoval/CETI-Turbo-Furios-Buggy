@@ -52,6 +52,7 @@
      <Compile Include="Assets\Solo\Scripts\Carreras.cs" />
      <Compile Include="Assets\Solo\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Solo\Scripts\Vueltas.cs" />
+     <Compile Include="Assets\Transicion\ManejadorEscenas.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
