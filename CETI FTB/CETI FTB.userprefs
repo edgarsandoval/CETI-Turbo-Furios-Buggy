@@ -1,48 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\IA\hoMove.cs">
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\CargarCarro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\AjusteGrafico.js">
     <Files>
-      <File FileName="Assets\SelectorMapa\MapSelector.cs" Line="1" Column="1" />
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="64" Column="3" />
+      <File FileName="Assets\Menu\Botones.js" Line="1" Column="1" />
+      <File FileName="Assets\Menu\AjusteGrafico.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Armas\Trigger.cs">
->>>>>>> origin/master
-    <Files>
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="85" Column="35" />
-      <File FileName="Assets\Solo\IA\hoMove.cs" Line="18" Column="34" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="CETI FTB" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Solo" expanded="True">
-                <Node name="IA" expanded="True">
-                  <Node name="hoMove.cs" selected="True" />
-                </Node>
-                <Node name="Scripts" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Assembly-CSharp-Editor" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-<<<<<<< HEAD
-=======
-=======
-  <MonoDevelop.Ide.Workbench />
->>>>>>> origin/master
->>>>>>> c9c479abc208869eabd6f5066dda506c4474a3b3
->>>>>>> origin/master
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
