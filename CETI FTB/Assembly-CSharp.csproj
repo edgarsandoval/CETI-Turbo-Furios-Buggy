@@ -46,9 +46,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Armas\Trigger.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Multiplayer\CargarMapa.cs" />
+=======
+     <Compile Include="Assets\PixelPlacement\iTween.cs" />
+>>>>>>> 40c94008be3ec3c87ede23fa8402fb135400b338
      <Compile Include="Assets\Selector\CarSelector.cs" />
      <Compile Include="Assets\SelectorMapa\MapSelector.cs" />
+     <Compile Include="Assets\Solo\IA\PathManager.cs" />
+     <Compile Include="Assets\Solo\IA\WaypointManager.cs" />
+     <Compile Include="Assets\Solo\IA\hoMove.cs" />
      <Compile Include="Assets\Solo\Scripts\CargarCarro.cs" />
      <Compile Include="Assets\Solo\Scripts\Carreras.cs" />
      <Compile Include="Assets\Solo\Scripts\Checkpoint.cs" />
@@ -72,6 +79,7 @@
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Holoville\HOTween_License.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
@@ -156,6 +164,9 @@
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="HOTween">
+ <HintPath>C:/Users/sgzad/Documents/CETI-Turbo-Furios-Buggy/CETI FTB/Assets/Holoville/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

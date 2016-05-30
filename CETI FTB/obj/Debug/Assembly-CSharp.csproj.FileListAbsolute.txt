@@ -22,3 +22,6 @@ C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSh
 C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.pdb
 C:\Users\Edgar Sandoval\Documents\GitHub\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Edgar Sandoval\Documents\GitHub\CETI-Turbo-Furios-Buggy\CETI FTB\obj\Debug\Assembly-CSharp.dll
+C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\Temp\bin\Debug\HOTween.dll
+C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\Temp\bin\Debug\HOTween.pdb
+C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\CETI FTB\Temp\bin\Debug\HOTween.xml
