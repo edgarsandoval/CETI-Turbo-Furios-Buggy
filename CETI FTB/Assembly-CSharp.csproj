@@ -46,7 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Armas\Trigger.cs" />
+<<<<<<< HEAD
+     <Compile Include="Assets\Multiplayer\CargarMapa.cs" />
+=======
      <Compile Include="Assets\PixelPlacement\iTween.cs" />
+>>>>>>> 40c94008be3ec3c87ede23fa8402fb135400b338
      <Compile Include="Assets\Selector\CarSelector.cs" />
      <Compile Include="Assets\SelectorMapa\MapSelector.cs" />
      <Compile Include="Assets\Solo\IA\PathManager.cs" />

@@ -15,9 +15,17 @@ public class CargarCarro : MonoBehaviour {
 	{
 		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
+<<<<<<< HEAD
+
 		for (int i = 0; i < kart.Length; i++)
 			kart [i].SetActive (false);
 		kart [kartSelected].SetActive (true);
+
+=======
+		for (int i = 0; i < kart.Length; i++)
+			kart [i].SetActive (false);
+		kart [kartSelected].SetActive (true);
+>>>>>>> 40c94008be3ec3c87ede23fa8402fb135400b338
 		switch (mapa)
 		{
 			case 1:
