@@ -10,7 +10,7 @@ public function BotonPersonaje()
 
 public function BotonMultiplayer()
 {
-	Application.LoadLevel("Offline");
+	Application.LoadLevel("Main");
 }
 
 public function BotonSalir()

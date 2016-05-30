@@ -3,8 +3,8 @@ public var steerAngle:Number;
 public var rotationT:float = 0.25;
 
 function FixedUpdate () {
-	//var x:Number = Input.GetAxis("Horizontal");
-	//var y:Number = Input.GetAxis("Vertical");
+	var x:Number = Input.GetAxis("Horizontal");
+	var y:Number = Input.GetAxis("Vertical");
 	
 	if (HitTestWithRoad()) {}
 	this.GetComponent.<Rigidbody>().velocity += y * transform.forward * forwardSpeed;
