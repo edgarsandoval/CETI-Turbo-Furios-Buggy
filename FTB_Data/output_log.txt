@@ -1,0 +1,116 @@
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: ATI Mobility Radeon HD 4200 Series (ID=0x9712)
+    Vendor:   ATI
+    VRAM:     1084 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\HOTween.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\HOTween.dll into Unity Child Domain
+- Completed reload, in  0.645 seconds
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.673298 ms
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: ATI Mobility Radeon HD 4200 Series (ID=0x9712)
+    Vendor:   ATI
+    VRAM:     1084 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\HOTween.dll (this message is harmless)
+Loading C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\HOTween.dll into Unity Child Domain
+- Completed reload, in  0.110 seconds
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.468474 ms
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\sgzad\Documents\CETI-Turbo-Furios-Buggy\FTB_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+lol
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+NoError
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Received pong from 192.168.56.1:25001
+ 
+(Filename:  Line: 852)
+
+Received pong from 192.168.1.66:25001
+ 
+(Filename:  Line: 852)
+
+lol
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+NoError
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Received pong from 192.168.56.1:25001
+ 
+(Filename:  Line: 852)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename:  Line: 343)
+
+Received pong from 192.168.1.66:25001
+ 
+(Filename:  Line: 852)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.147003 ms
+
+Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.798764 ms (FindLiveObjects: 0.061593 ms CreateObjectMapping: 0.039596 ms MarkObjects: 0.417469 ms  DeleteObjects: 0.279127 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.086377 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 19a8 -> priority: 1 
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1390.
+Total: 1.655211 ms (FindLiveObjects: 0.178915 ms CreateObjectMapping: 0.093857 ms MarkObjects: 0.603717 ms  DeleteObjects: 0.777744 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1aac -> priority: 1 
