@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Menu/menu.unity
-=======
-- path: Assets/Multiplayer/Main.unity
->>>>>>> origin/master
+- path: Assets/Solo/Mapa.unity
   isLoaded: 1
   isActive: 1

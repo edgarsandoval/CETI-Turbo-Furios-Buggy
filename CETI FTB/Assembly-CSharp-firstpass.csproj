@@ -186,7 +186,7 @@
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
-     <None Include="Assets\Holoville\HOTween_License.txt" />
+     <None Include="Assets\IA\Holoville\HOTween_License.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
@@ -273,7 +273,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="HOTween">
- <HintPath>C:/Users/sgzad/Documents/CETI-Turbo-Furios-Buggy/CETI FTB/Assets/Holoville/HOTween.dll</HintPath>
+ <HintPath>C:/Users/sgzad/Documents/CETI-Turbo-Furios-Buggy/CETI FTB/Assets/IA/Holoville/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
