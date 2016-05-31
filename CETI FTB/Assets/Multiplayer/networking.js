@@ -12,25 +12,29 @@ var gameName : String = "Sin nombre";
 var refreshing = false; 
 var hostData : HostData[]; // a list of all current hosts
 
-var playerPrefabs : GameObject[]; // your player
+var playerPrefab : GameObject; // your player
+private var kart : Transform[];
 
 var create = false;
 var joining = false;
 var waiting = false;
 
-var serverName = "";
-var serverInfo = "";
-var serverPass = "";
+private var serverName = "";
+private var serverInfo = "";
+private var serverPass = "";
+private var playerName = "";
+private var clientPass = "";
+private var scrollPosition : Vector2 = Vector2.zero;
 
-var playerName = "";
-
-var clientPass = "";
-
-var scrollPosition : Vector2 = Vector2.zero;
+private var spawnPoints : Vector3[,] = new Vector3[3, 8];
 
 function Start()
 {
-  playerName = PlayerPrefs.HasKey("nombre") || PlayerPrefs.GetString("nombre") != "" ? PlayerPrefs.GetString("nombre") : "NuevoJugador" + Random.Range(0, 50); 
+	spawnPoints[0, 0] = Vector3 (50.64661f, 4.401484f, 11.26688f);
+	spawnPoints[1, 0] = Vector3 (267.274f, 13.80426f, -71.75798f);
+	spawnPoints[2, 0] = Vector3 (310f, 19.6f, 175.7f);
+
+	playerName = PlayerPrefs.HasKey("nombre") || PlayerPrefs.GetString("nombre") != "" ? PlayerPrefs.GetString("nombre") : "NuevoJugador" + Random.Range(0, 50); 
 } 
  
 function OnGUI ()
@@ -55,18 +59,35 @@ function OnGUI ()
         if (create) // Al crear una partida, muestra el menú del servidor. 
         {
 
-            if (GUI.Button(Rect(Screen.width/2 - 75,Screen.height/3 + 100, 150, 80),"Crear", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/2 - 100 , Screen.height/3 + 150, 200, 80),"Crear partida", buttonGUISytle))
             {
                 startServer();
             }
 
-            GUI.Label(Rect (Screen.width/2 - 135, Screen.height / 3, 100, 20), "Nombre del Servidor:", labelGUIStyle);
-            GUI.Label(Rect (Screen.width/2 + 50,Screen.height/3,100,20),"Contraseña:", labelGUIStyle);
-            GUI.Label(Rect (Screen.width/2 - 65,Screen.height/2 + 90,100,20),"Información Adicional:", labelGUIStyle);
+            GUI.Label(Rect (Screen.width/2 - 135, Screen.height / 3 - 50, 100, 20), "Nombre del Servidor:", labelGUIStyle);
+            GUI.Label(Rect (Screen.width/2 + 50,Screen.height/3 - 50,100,20),"Contraseña:", labelGUIStyle);
+            GUI.Label(Rect (Screen.width/2 - 40	,Screen.height / 3 + 250, 120 ,20),"Información:", labelGUIStyle);
 
-            serverName = GUI.TextField (Rect (Screen.width/2 - 130,Screen.height/3 + 30, 120, 30), serverName, 12, textFieldGUIStyle);
-            serverPass = GUI.PasswordField (Rect (Screen.width/2 + 30,Screen.height/3 + 30,120, 30), serverPass, "*"[0], 12, textFieldGUIStyle);
-            serverInfo = GUI.TextArea (Rect (Screen.width/2 - 100,Screen.height/2 	+ 120, 200, 60), serverInfo, 35, textFieldGUIStyle);
+            GUI.Label(Rect (Screen.width/2 - 50	,Screen.height/3 + 40, 120 ,20), "Selecciona un mapa:", labelGUIStyle);
+
+           	if (GUI.Button(Rect(Screen.width/3 - 170, Screen.height/3 + 65, 180, 80)," Primer Nivel", buttonGUISytle))
+            {
+                PlayerPrefs.SetInt("mapa", 1);
+            }
+
+           	if (GUI.Button(Rect(Screen.width/3 + 50, Screen.height/3 + 65, 180, 80)," Segundo Nivel", buttonGUISytle))
+            {
+                PlayerPrefs.SetInt("mapa", 2);
+            }
+
+           	if (GUI.Button(Rect(Screen.width/3 + 260, Screen.height/3 + 65, 180, 80)," Tercer Nivel", buttonGUISytle))
+            {
+                PlayerPrefs.SetInt("mapa", 3);
+            }
+
+            serverName = GUI.TextField (Rect (Screen.width/2 - 130,Screen.height/3 - 50 + 30, 120, 30), serverName, 12, textFieldGUIStyle);
+            serverPass = GUI.PasswordField (Rect (Screen.width/2 + 30,Screen.height/3 - 50 + 30,120, 30), serverPass, "*"[0], 12, textFieldGUIStyle);
+            serverInfo = GUI.TextArea (Rect (Screen.width/2 - 100,Screen.height/ 3 + 300, 200, 60), serverInfo, 35, textFieldGUIStyle);
 
             if (GUI.Button(Rect(Screen.width/1.2 - 25,Screen.height/20, 150, 100),"Atras", buttonGUISytle))
             {
@@ -100,7 +121,6 @@ function OnGUI ()
                      
                     if (GUI.Button(Rect(480,30 + i * 30 - 10, 150, 50),"Entrar", buttonGUISytle))
                     {
-                    	Debug.Log("lol");
                         Debug.Log(Network.Connect(hostData[i], clientPass))	;
                     }
                 }
@@ -188,29 +208,51 @@ function startServer ()
 public function iniciarCarrera()
 {
 	waiting = false;
-	PlayerPrefs.SetString("nextScene", "MapaMultijugador");
-	Application.LoadLevel("Transicion");
+
 	lobbySpawn();
 }
 
 function OnServerInitialized ()
 { 
     DontDestroyOnLoad (transform.gameObject);
-    create = false;
-    waiting = true;
+    //create = false;
+    //waiting = true;
+
+    //PlayerPrefs.SetString("nextScene", "MapaMultijugador");
+	//Application.LoadLevel("Transicion");
+    lobbySpawn();
 }
 
 function OnConnectedToServer ()
 {	
 	waiting = true;
+	Debug.Log("Conectado :)");
     lobbySpawn();
 }
 
 function lobbySpawn()
 {
-    yield WaitForSeconds(0.1);
-    var made = Network.Instantiate(playerPrefabs[PlayerPrefs.GetInt("kart")], transform.position, transform.rotation, 0);
+    //yield WaitForSeconds(0.1);
+    Debug.Log(DP(Network.connections.Length));
+    var made = Network.Instantiate(playerPrefab, DP(Network.connections.Length), Quaternion.Euler (0, 190, 0), 0);
     made.GetComponent(playerMove).playerName = playerName;
+
+    kart = new Transform[8];
+
+    kart[0] = made.transform.FindChild("Rojo");
+	kart[1] = made.transform.FindChild("Azul");
+	kart[2] = made.transform.FindChild("Amarillo");
+	kart[3] = made.transform.FindChild("Verde");
+	kart[4] = made.transform.FindChild("Blanco");
+	kart[5] = made.transform.FindChild("Rosa");
+	kart[6] = made.transform.FindChild("Morado");
+	kart[7] = made.transform.FindChild("Negro");
+
+	for(var i : int = 0; i < kart.Length; i++)
+		kart[i].gameObject.SetActive(false);
+
+	kart[PlayerPrefs.GetInt("kart")].gameObject.SetActive(true);
+
     PlayerPrefs.SetString("nombre", playerName);
     if(Network.isClient)
     {
@@ -223,4 +265,25 @@ function refreshHostList ()
     MasterServer.ClearHostList();
     MasterServer.RequestHostList(gameName);
     refreshing = true;
+}
+
+function DP(n : int)
+{
+	var x : int = PlayerPrefs.GetInt("mapa") - 1;
+	if(spawnPoints[x, n] != Vector3.zero)
+		return spawnPoints[x, n];
+	else
+	{
+		spawnPoints[x, n] = spawnPoints[x, n - 1];
+	 
+		if(n % 2)
+			spawnPoints[x, n].x -= 10;
+		else
+		{
+			spawnPoints[x, n].x += 10;
+			spawnPoints[x, n].z += 10;
+		}
+
+		return spawnPoints[x, n];
+	}
 }

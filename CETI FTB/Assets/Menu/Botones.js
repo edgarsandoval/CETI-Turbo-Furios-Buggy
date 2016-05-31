@@ -10,7 +10,7 @@ public function BotonPersonaje()
 
 public function BotonMultiplayer()
 {
-	Application.LoadLevel("Main");
+	Application.LoadLevel("MapaMultijugador");
 }
 
 public function BotonSalir()
