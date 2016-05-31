@@ -1,10 +1,11 @@
 ﻿public var forwardSpeed:Number;
 public var steerAngle:Number;
 public var rotationT:float = 0.25;
+public var playerName : String;
 
 function FixedUpdate () {
-	var x:Number = Input.GetAxis("Horizontal");
-	var y:Number = Input.GetAxis("Vertical");
+	var x : float = Input.GetAxis("Horizontal");
+	var y : float = Input.GetAxis("Vertical");
 	
 	if (HitTestWithRoad()) {}
 
@@ -59,7 +60,7 @@ function HitTestWithRoad() {
 
 
 @RPC
-function move(x : Number, y : Number)
+function move(x : float, y : float)
 {
 	this.GetComponent.<Rigidbody>().velocity += y * transform.forward * forwardSpeed;
 	this.GetComponent.<Rigidbody>().AddTorque(transform.up * x * steerAngle, ForceMode.Acceleration);

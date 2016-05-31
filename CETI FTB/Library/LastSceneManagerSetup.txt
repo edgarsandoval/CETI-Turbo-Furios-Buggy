@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Menu/menu.unity
+- path: Assets/Multiplayer/MapaMultijugador.unity
   isLoaded: 1
   isActive: 1

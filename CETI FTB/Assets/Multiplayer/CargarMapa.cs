@@ -6,9 +6,10 @@ public class CargarMapa : MonoBehaviour {
 	//public GameObject carro;
 
 	private int mapa;
+
 	void Start ()
 	{
-		Network.isMessageQueueRunning = false;	
+		//kartSelected = PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 0;	
 		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 
 		/*switch (mapa) {
