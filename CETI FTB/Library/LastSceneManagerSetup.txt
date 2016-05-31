@@ -1,6 +1,10 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Menu/menu.unity
+=======
+- path: Assets/Solo/Mapa.unity
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 =======
 - path: Assets/Solo/Mapa.unity
 >>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c

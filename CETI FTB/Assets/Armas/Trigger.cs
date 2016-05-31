@@ -6,8 +6,11 @@ public class Trigger : MonoBehaviour {
 	public GameObject[] Armas; 
 	public GameObject PlayerPrefab;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static int actual = -1; // -1 = ninguna
 =======
+=======
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 	public static int actual = 0; // 0 = ninguna
 >>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 
@@ -16,6 +19,7 @@ public class Trigger : MonoBehaviour {
 	
 	void Update () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (Input.GetKeyDown ("space") && actual >= 0) {
 			/*if (actual == 2)
 				soltar ();
@@ -23,6 +27,10 @@ public class Trigger : MonoBehaviour {
 				aventar ();*/
 			soltar ();
 		}
+=======
+		if (Input.GetKeyDown ("space") && actual != 0)
+			soltar ();
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 =======
 		if (Input.GetKeyDown ("space") && actual != 0)
 			soltar ();
@@ -37,6 +45,7 @@ public class Trigger : MonoBehaviour {
 		}
 	}
 
+<<<<<<< HEAD
 	public static string getActual() {
 		switch (actual) {
 		default:
@@ -65,6 +74,9 @@ public class Trigger : MonoBehaviour {
 		arma.SetActive (true);
 		actual = -1;
 =======
+=======
+	public void soltar () {
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 		GameObject arma = Instantiate (Armas [2], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
 		arma.SetActive (true);
 		arma.AddComponent<MeshFilter> ();
