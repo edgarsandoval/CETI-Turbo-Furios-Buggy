@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Transicion/Transicion.unity
+- path: Assets/Solo/Mapa.unity
   isLoaded: 1
   isActive: 1
