@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: ddd5e6efc7a35934da077a7091d77479
+timeCreated: 1464458762
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ic
+    100002: //RootNode
+    100004: Pin
+    100006: Pin_001
+    100008: Pin_001_MeshPart0
+    100010: Pin_001_MeshPart1
+    100012: Pin_001_MeshPart2
+    100014: Pin_001_MeshPart3
+    100016: Pin_002
+    100018: Pin_002_MeshPart0
+    100020: Pin_002_MeshPart1
+    100022: Pin_002_MeshPart2
+    100024: Pin_002_MeshPart3
+    100026: Pin_003
+    100028: Pin_003_MeshPart0
+    100030: Pin_003_MeshPart1
+    100032: Pin_003_MeshPart2
+    100034: Pin_003_MeshPart3
+    100036: Pin_Curve
+    100038: Pin_Curve_001
+    100040: Pin_Curve_002
+    100042: Pin_Curve_003
+    100044: Pin_MeshPart0
+    100046: Pin_MeshPart1
+    100048: Pin_MeshPart2
+    100050: Pin_MeshPart3
+    400000: ic
+    400002: //RootNode
+    400004: Pin
+    400006: Pin_001
+    400008: Pin_001_MeshPart0
+    400010: Pin_001_MeshPart1
+    400012: Pin_001_MeshPart2
+    400014: Pin_001_MeshPart3
+    400016: Pin_002
+    400018: Pin_002_MeshPart0
+    400020: Pin_002_MeshPart1
+    400022: Pin_002_MeshPart2
+    400024: Pin_002_MeshPart3
+    400026: Pin_003
+    400028: Pin_003_MeshPart0
+    400030: Pin_003_MeshPart1
+    400032: Pin_003_MeshPart2
+    400034: Pin_003_MeshPart3
+    400036: Pin_Curve
+    400038: Pin_Curve_001
+    400040: Pin_Curve_002
+    400042: Pin_Curve_003
+    400044: Pin_MeshPart0
+    400046: Pin_MeshPart1
+    400048: Pin_MeshPart2
+    400050: Pin_MeshPart3
+    2300000: ic
+    2300002: Pin_001_MeshPart0
+    2300004: Pin_001_MeshPart1
+    2300006: Pin_001_MeshPart2
+    2300008: Pin_001_MeshPart3
+    2300010: Pin_002_MeshPart0
+    2300012: Pin_002_MeshPart1
+    2300014: Pin_002_MeshPart2
+    2300016: Pin_002_MeshPart3
+    2300018: Pin_003_MeshPart0
+    2300020: Pin_003_MeshPart1
+    2300022: Pin_003_MeshPart2
+    2300024: Pin_003_MeshPart3
+    2300026: Pin_Curve
+    2300028: Pin_Curve_001
+    2300030: Pin_Curve_002
+    2300032: Pin_Curve_003
+    2300034: Pin_MeshPart0
+    2300036: Pin_MeshPart1
+    2300038: Pin_MeshPart2
+    2300040: Pin_MeshPart3
+    3300000: ic
+    3300002: Pin_001_MeshPart0
+    3300004: Pin_001_MeshPart1
+    3300006: Pin_001_MeshPart2
+    3300008: Pin_001_MeshPart3
+    3300010: Pin_002_MeshPart0
+    3300012: Pin_002_MeshPart1
+    3300014: Pin_002_MeshPart2
+    3300016: Pin_002_MeshPart3
+    3300018: Pin_003_MeshPart0
+    3300020: Pin_003_MeshPart1
+    3300022: Pin_003_MeshPart2
+    3300024: Pin_003_MeshPart3
+    3300026: Pin_Curve
+    3300028: Pin_Curve_001
+    3300030: Pin_Curve_002
+    3300032: Pin_Curve_003
+    3300034: Pin_MeshPart0
+    3300036: Pin_MeshPart1
+    3300038: Pin_MeshPart2
+    3300040: Pin_MeshPart3
+    4300000: Pin_Curve_003
+    4300002: Pin_003_MeshPart0
+    4300004: Pin_003_MeshPart1
+    4300006: Pin_003_MeshPart2
+    4300008: Pin_003_MeshPart3
+    4300010: Pin_Curve_002
+    4300012: Pin_002_MeshPart0
+    4300014: Pin_002_MeshPart1
+    4300016: Pin_002_MeshPart2
+    4300018: Pin_002_MeshPart3
+    4300020: Pin_Curve_001
+    4300022: Pin_001_MeshPart0
+    4300024: Pin_001_MeshPart1
+    4300026: Pin_001_MeshPart2
+    4300028: Pin_001_MeshPart3
+    4300030: Pin_Curve
+    4300032: Pin_MeshPart0
+    4300034: Pin_MeshPart1
+    4300036: Pin_MeshPart2
+    4300038: Pin_MeshPart3
+    4300040: ic
+    6400000: ic
+    6400002: Pin_001_MeshPart0
+    6400004: Pin_001_MeshPart1
+    6400006: Pin_001_MeshPart2
+    6400008: Pin_001_MeshPart3
+    6400010: Pin_002_MeshPart0
+    6400012: Pin_002_MeshPart1
+    6400014: Pin_002_MeshPart2
+    6400016: Pin_002_MeshPart3
+    6400018: Pin_003_MeshPart0
+    6400020: Pin_003_MeshPart1
+    6400022: Pin_003_MeshPart2
+    6400024: Pin_003_MeshPart3
+    6400026: Pin_Curve
+    6400028: Pin_Curve_001
+    6400030: Pin_Curve_002
+    6400032: Pin_Curve_003
+    6400034: Pin_MeshPart0
+    6400036: Pin_MeshPart1
+    6400038: Pin_MeshPart2
+    6400040: Pin_MeshPart3
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

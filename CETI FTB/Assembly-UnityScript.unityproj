@@ -49,6 +49,7 @@
      <Compile Include="Assets\Karts\Scripts\SpiderPlayer.js" />
      <Compile Include="Assets\Menu\AjusteGrafico.js" />
      <Compile Include="Assets\Menu\Botones.js" />
+     <Compile Include="Assets\Multiplayer\PauseMenuMultiplayer.js" />
      <Compile Include="Assets\Multiplayer\networkView.js" />
      <Compile Include="Assets\Multiplayer\networking.js" />
      <Compile Include="Assets\Multiplayer\playerMove.js" />

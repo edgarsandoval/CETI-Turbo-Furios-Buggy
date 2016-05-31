@@ -84,6 +84,7 @@ public class CargarCarro : MonoBehaviour {
 		// Add IA w/values
 		hoMove.setPath (pistasIA[mapa - 1]);
 		go.AddComponent<hoMove>();
+		go.AddComponent<SpiderAI> ();
 		Destroy (capsula);
 
 		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -80, 0)) as GameObject;

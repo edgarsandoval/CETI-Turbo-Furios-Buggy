@@ -1,12 +1,21 @@
 ﻿public var forwardSpeed:Number;
 public var steerAngle:Number;
 public var rotationT:float = 0.25;
+public var posicionAnterior:Vector3;
+public var rotacionAnterior:Quaternion;
 
 function FixedUpdate () {
 	var x:Number = Input.GetAxis("Horizontal");
 	var y:Number = Input.GetAxis("Vertical");
 	
-	if (HitTestWithRoad()) {}
+	if (HitTestWithRoad()) {
+		posicionAnterior = this.transform.position;
+		rotacionAnterior = this.transform.rotation;
+	}
+	if (Input.GetKeyDown ("r")) {
+		this.transform.position = posicionAnterior;
+		this.transform.rotation = rotacionAnterior;
+	}
 	this.GetComponent.<Rigidbody>().velocity += y * transform.forward * forwardSpeed;
 		
 	this.GetComponent.<Rigidbody>().AddTorque(transform.up * x * steerAngle, ForceMode.Acceleration);

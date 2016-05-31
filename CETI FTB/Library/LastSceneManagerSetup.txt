@@ -1,12 +1,8 @@
 sceneSetups:
 <<<<<<< HEAD
+- path: Assets/Menu/menu.unity
+=======
 - path: Assets/Solo/Mapa.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Multiplayer/MapaMultijugador.unity
-=======
-- path: Assets/Transicion/Transicion.unity
->>>>>>> 367e025cc28f538177e4a387270ed541d95d398d
->>>>>>> origin/master
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
   isLoaded: 1
   isActive: 1

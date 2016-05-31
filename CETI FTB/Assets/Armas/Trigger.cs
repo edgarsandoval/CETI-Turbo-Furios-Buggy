@@ -4,33 +4,80 @@ using System.Collections;
 public class Trigger : MonoBehaviour {
 
 	public GameObject[] Armas; 
+	public GameObject PlayerPrefab;
+<<<<<<< HEAD
+	public static int actual = -1; // -1 = ninguna
+=======
 	public static int actual = 0; // 0 = ninguna
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 
 	void Start () {
-	
 	}
 	
 	void Update () {
-		//if (Input.GetKeyDown ("space"))
-			//soltar ();
+<<<<<<< HEAD
+		if (Input.GetKeyDown ("space") && actual >= 0) {
+			/*if (actual == 2)
+				soltar ();
+			else
+				aventar ();*/
+			soltar ();
+		}
+=======
+		if (Input.GetKeyDown ("space") && actual != 0)
+			soltar ();
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
 	}
 
 	void OnTriggerEnter (Collider Check) {
-		if (Check.tag == "Player") {
+		if (Check.tag == "Player" || Check.tag == "IA") {
 			this.gameObject.SetActive (false);
-			actual = Random.Range (1, Armas.Length);
+			actual = Random.Range (0, Armas.Length);
+			Debug.Log (actual);
 		}
 	}
-	/*
-	public void soltar () {
-		GameObject carro = CargarCarro.getCarro();
-		GameObject cactus = Instantiate (Armas [actual], carro.transform.position, carro.transform.rotation) as GameObject;
-		actual = 0;
+
+	public static string getActual() {
+		switch (actual) {
+		default:
+			return "";
+			break;
+		case 0:
+			return "Micro";
+			break;	
+		case 1:
+			return "HDD";
+			break;
+		case 2:
+			return "Sancho";
+			break;
+		case 3:
+			return "Aifon";
+			break;
+
+		}
+		return "";
 	}
 
+	public void soltar () {
+<<<<<<< HEAD
+		GameObject arma = Instantiate (Armas [actual], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
+		arma.SetActive (true);
+		actual = -1;
+=======
+		GameObject arma = Instantiate (Armas [2], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
+		arma.SetActive (true);
+		arma.AddComponent<MeshFilter> ();
+		actual = 0;
+>>>>>>> feee2728477daf21a6035c1c6539c1263a92cb1c
+	}
+	/*
 	public void aventar () {
-		GameObject carro = CargarCarro.getCarro();
-		GameObject lanzar = Instantiate (Armas [Trigger.actual], carro.transform.position, carro.transform.rotation) as GameObject;
+		GameObject arma = Instantiate (Armas [actual], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
+		arma.GetComponent<Rigidbody>().AddForce (arma.transform.forward * 5);
+		//arma.AddForce (direccion * 15f, ForceMode.Impulse);
+		//arma.SetActive (true);
+		actual = -1;
 		// ? :c lanzar.rigidbody.AddForce (transform.forward * 2000 * 3);
-	}*/
+	}
 }
