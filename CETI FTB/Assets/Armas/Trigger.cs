@@ -5,12 +5,17 @@ public class Trigger : MonoBehaviour {
 
 	public GameObject[] Armas; 
 	public GameObject PlayerPrefab;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 	public static int actual = -1; // -1 = ninguna
 
 	void Start () {
 	}
 	
 	void Update () {
+<<<<<<< HEAD
 		if (Input.GetKeyDown ("space") && actual >= 0) {
 			/*if (actual == 2)
 				soltar ();
@@ -18,6 +23,11 @@ public class Trigger : MonoBehaviour {
 				aventar ();*/
 			soltar ();
 		}
+=======
+
+		if (Input.GetKeyDown ("space") && actual != -1)
+			soltar ();
+>>>>>>> origin/master
 	}
 
 	void OnTriggerEnter (Collider Check) {
@@ -53,6 +63,10 @@ public class Trigger : MonoBehaviour {
 		GameObject arma = Instantiate (Armas [actual], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
 		arma.SetActive (true);
 		actual = -1;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 	}
 	/*
 	public void aventar () {
@@ -62,5 +76,10 @@ public class Trigger : MonoBehaviour {
 		//arma.SetActive (true);
 		actual = -1;
 		// ? :c lanzar.rigidbody.AddForce (transform.forward * 2000 * 3);
+<<<<<<< HEAD
 	}*/
+=======
+	}
+	*/
+>>>>>>> origin/master
 }
