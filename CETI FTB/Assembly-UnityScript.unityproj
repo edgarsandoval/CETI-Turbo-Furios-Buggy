@@ -45,13 +45,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Karts\Scripts\SpiderAI.js" />
      <Compile Include="Assets\Karts\Scripts\SpiderPlayer.js" />
      <Compile Include="Assets\Menu\AjusteGrafico.js" />
      <Compile Include="Assets\Menu\Botones.js" />
      <Compile Include="Assets\Multiplayer\PauseMenuMultiplayer.js" />
      <Compile Include="Assets\Multiplayer\networkView.js" />
-     <Compile Include="Assets\Multiplayer\networking.js" />
      <Compile Include="Assets\Multiplayer\playerMove.js" />
      <Compile Include="Assets\Solo\Scripts\PauseMenu.js" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -165,6 +163,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{15581E07-4470-11BC-5B69-D6A8F0FCB2FD}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{21B1F0C4-CEE9-7D0B-9B99-10CF1FA0F442}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
