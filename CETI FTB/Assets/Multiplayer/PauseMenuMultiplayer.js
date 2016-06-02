@@ -81,6 +81,7 @@ GUI.skin.button.font = pauseMenuFont;
 		//Crea botón "Salir del juego" -  regresa al menú principal. 
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 + 50,250,50), "Salir del juego"))
 		{
+			Destroy(GameObject.Find("Scripts"));
 			PlayerPrefs.SetString("nextScene", "menu");
 			Application.LoadLevel("Transicion");
 			Destroy(transform.parent.gameObject);

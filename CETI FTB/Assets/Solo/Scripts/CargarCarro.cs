@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CargarCarro : MonoBehaviour {
@@ -11,13 +12,22 @@ public class CargarCarro : MonoBehaviour {
 	private Vector3 spawnPoint;
 	private int mapa;
 
+	private bool couroutineStarted = false;
+	private int tiempo = 3;
+	private GameObject contador;
+
 	void Start ()
 	{
+		contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
 		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
+
 		for (int i = 0; i < kart.Length; i++)
 			kart [i].SetActive (false);
 		kart [kartSelected].SetActive (true);
+
+		carro.GetComponent<SpiderPlayer>().enabled = false;
+
 		switch (mapa)
 		{
 			case 1:
@@ -55,6 +65,31 @@ public class CargarCarro : MonoBehaviour {
 				break;
 			}
 		}
+
+		contador.SetActive (true);
+	}
+
+	void Update()
+	{
+		if (!couroutineStarted)
+			StartCoroutine (retardo (1));
+
+		contador.GetComponent<Text> ().text = tiempo > 0 ? tiempo.ToString() : "Corre!";
+
+		if (tiempo == -1)
+		{
+			contador.SetActive (false);
+			carro.GetComponent<SpiderPlayer> ().enabled = true;
+		}
+
+	}
+
+	IEnumerator retardo(float t)
+	{
+		couroutineStarted = true;
+		yield return new WaitForSeconds(t);
+		tiempo--;
+		couroutineStarted = tiempo == -1;
 	}
 
 	public void crearOponente(int i)
@@ -84,8 +119,10 @@ public class CargarCarro : MonoBehaviour {
 		// Add IA w/values
 		int aux = AddRuta();
 		Debug.Log (aux);
-		hoMove.setPath (pistasIA[aux]); // Agrega mapa
+		//hoMove.setPath (pistasIA[AddRuta()]); // Agrega mapa
 		go.AddComponent<hoMove>();
+		go.GetComponent<hoMove> ().SetPath (pistasIA [aux]);
+		go.GetComponent<hoMove> ().Stop ();
 		//go.AddComponent<Rigidbody> ();
 		go.AddComponent<SpiderAI> ();
 		Destroy (capsula);
@@ -95,21 +132,6 @@ public class CargarCarro : MonoBehaviour {
 		oponente.SetActive (true);
 
 		oponente.transform.parent = go.transform;
-	}
-
-	public Component CopyComponent(Component original, GameObject destino)
-	{
-		System.Type tipo = original.GetType();
-		Component copia = destino.AddComponent(tipo);
-
-		System.Reflection.FieldInfo[] campos = tipo.GetFields();
-
-		foreach (System.Reflection.FieldInfo campo in campos)
-		{
-			campo.SetValue (copia, campo.GetValue (original));
-		}	
-
-		return copia;
 	}
 
 	private int AddRuta() {
