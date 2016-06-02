@@ -159,10 +159,11 @@ function OnGUI ()
         	GUI.Box(Rect(100, 100, 575, 450), "");
 	        GUI.Label(Rect(Screen.width / 2 - 100, Screen.height/2 - 11, 200,22), "Jugadores en la sala : " + (Network.connections.Length + 1) + "/" + (Network.maxConnections + 1), titleGUIStyle);
 
-	        if (GUI.Button(Rect(Screen.width/2 - 110,Screen.height/2 + 150, 220, 80),"Iniciar Carrera", buttonGUISytle))
-	        {
-	            iniciarCarrera();
-	        }
+	        if(Network.connections.Length > 1)
+		        if (GUI.Button(Rect(Screen.width/2 - 110,Screen.height/2 + 150, 220, 80),"Iniciar Carrera", buttonGUISytle))
+		        {
+		            iniciarCarrera();
+		        }
 	    }
 	    else
 	    {

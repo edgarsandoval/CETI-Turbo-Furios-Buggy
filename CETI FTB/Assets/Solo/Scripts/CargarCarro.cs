@@ -82,8 +82,11 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<CharacterController>();
 
 		// Add IA w/values
-		hoMove.setPath (pistasIA[mapa - 1]);
+		int aux = AddRuta();
+		Debug.Log (aux);
+		hoMove.setPath (pistasIA[aux]); // Agrega mapa
 		go.AddComponent<hoMove>();
+		//go.AddComponent<Rigidbody> ();
 		go.AddComponent<SpiderAI> ();
 		Destroy (capsula);
 
@@ -107,5 +110,20 @@ public class CargarCarro : MonoBehaviour {
 		}	
 
 		return copia;
+	}
+
+	private int AddRuta() {
+		switch (mapa) {
+		case 1:
+			return Random.Range (0, 2);
+			break;
+		case 2:
+			return Random.Range (2, 5);
+			break;
+		case 3:
+			return Random.Range (5, 8);
+			break;
+		}
+		return 0;
 	}
 }
