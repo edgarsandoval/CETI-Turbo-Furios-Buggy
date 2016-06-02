@@ -5,7 +5,6 @@ public class Trigger : MonoBehaviour {
 
 	public GameObject[] Armas; 
 	public GameObject PlayerPrefab;
-
 	public static int actual = -1; // -1 = ninguna
 
 	void Start () {
@@ -50,7 +49,6 @@ public class Trigger : MonoBehaviour {
 		GameObject arma = Instantiate (Armas [actual], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
 		arma.SetActive (true);
 		actual = -1;
-
 	}
 	/*
 	public void aventar () {
@@ -60,6 +58,6 @@ public class Trigger : MonoBehaviour {
 		//arma.SetActive (true);
 		actual = -1;
 		// ? :c lanzar.rigidbody.AddForce (transform.forward * 2000 * 3);
-	}
-	*/
+<<<<<<< HEAD
+	}*/
 }
