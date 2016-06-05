@@ -25,6 +25,19 @@ public class CargarCarro : MonoBehaviour {
 		for (int i = 0; i < kart.Length; i++)
 			kart [i].SetActive (false);
 		kart [kartSelected].SetActive (true);
+<<<<<<< HEAD
+=======
+
+		carro.GetComponent<SpiderPlayer>().enabled = false;
+
+		switch (mapa)
+		{
+			case 1:
+			{
+				Vector3 spawnPosition = new Vector3 (50.64661f, 4.401484f, 11.26688f);
+				carro.transform.position = spawnPosition;
+				carro.transform.rotation = Quaternion.Euler (0, 190, 0);
+>>>>>>> origin/master
 
 		Vector3 spawnPosition;
 		switch (mapa) {
@@ -80,6 +93,31 @@ public class CargarCarro : MonoBehaviour {
 			}
 			tiempo--;
 		}
+
+		contador.SetActive (true);
+	}
+
+	void Update()
+	{
+		if (!couroutineStarted)
+			StartCoroutine (retardo (1));
+
+		contador.GetComponent<Text> ().text = tiempo > 0 ? tiempo.ToString() : "Corre!";
+
+		if (tiempo == -1)
+		{
+			contador.SetActive (false);
+			carro.GetComponent<SpiderPlayer> ().enabled = true;
+		}
+
+	}
+
+	IEnumerator retardo(float t)
+	{
+		couroutineStarted = true;
+		yield return new WaitForSeconds(t);
+		tiempo--;
+		couroutineStarted = tiempo == -1;
 	}
 
 	IEnumerator retardo(float t)
@@ -115,6 +153,7 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<CharacterController>();
 		Destroy (capsula);
 
+<<<<<<< HEAD
 		// Añade script movimiento
 		go.AddComponent<hoMove>();
 		// Añade tag necesario para vueltas
@@ -123,6 +162,18 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<SpiderIA> ();
 		// Añade una ruta
 		go.GetComponent<hoMove> ().setPath (pistasIA[AddRuta()]);
+=======
+		// Add IA w/values
+		int aux = AddRuta();
+		Debug.Log (aux);
+		//hoMove.setPath (pistasIA[AddRuta()]); // Agrega mapa
+		go.AddComponent<hoMove>();
+		go.GetComponent<hoMove> ().SetPath (pistasIA [aux]);
+		go.GetComponent<hoMove> ().Stop ();
+		//go.AddComponent<Rigidbody> ();
+		go.AddComponent<SpiderAI> ();
+		Destroy (capsula);
+>>>>>>> origin/master
 
 		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -80, 0)) as GameObject;
 		oponente.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
