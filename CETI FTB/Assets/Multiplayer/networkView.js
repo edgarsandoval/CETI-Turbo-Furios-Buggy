@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+private var couroutineStarted = false;
+private var tiempo = 3;
+private var contador : GameObject;
+
 function Awake()
 {
 	if (!GetComponent.<NetworkView>().isMine)
@@ -9,11 +13,20 @@ function Awake()
  	}
 }
 
+function Start()
+{
+	contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
+	Debug.Log(contador);
+	if(GetComponent.<NetworkView>().isMine)
+	{
+		GetComponent.<NetworkView>().RPC("setPlayer", RPCMode.AllBuffered);
+	}
+}
+
 function Update()
 {
 	if(!(GameObject.Find("Scripts").GetComponent("networking") as networking).waiting)
 	{
-		(GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera = true;
 		GetComponent.<NetworkView>().RPC("iniciarCuenta", RPCMode.AllBuffered);
 	}
 
@@ -21,53 +34,58 @@ function Update()
 	{
 		GetComponent(playerMove).enabled = (GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera;
 	}
+}
 
-	//GetComponent.<NetworkView>().RPC("setPlayers", RPCMode.AllBuffered);
+function retardo(t : float) : IEnumerator
+{
+	couroutineStarted = true;
+	yield WaitForSeconds(t);
+	tiempo--;
+	couroutineStarted = tiempo == -1;
 }
 
 @RPC
 function iniciarCuenta()
 {
-	//Debug.Log(transform.FindChild("Información").gameObject.GetComponent("CuentaRegresiva"));
-	//(transform.FindChild("Información").gameObject.GetComponent("CuentaRegresiva") as CuentaRegresiva).iniciarJuego();
-
-	(GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera = true;
 	(GameObject.Find("Scripts").GetComponent("networking") as networking).waiting = false;
-}
-
-/*@RPC
-function setPlayers()
-{
-
-	for(var jugador : GameObject in GameObject.FindGameObjectsWithTag("Player"))
+	while(true)
 	{
-		if(jugador.GetComponent.<NetworkView>().isMine)
+		Debug.Log(tiempo);
+		if(!couroutineStarted)
+	         StartCoroutine(retardo(1));
+
+	    (contador.GetComponent("Text") as Text).text = tiempo > 0 ? tiempo.ToString() : "Corre!";
+
+		if(tiempo == -1)
 		{
-			if(!(jugador.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).isSeted)
-			{
-				(jugador.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).nombre = PlayerPrefs.GetString("nombre");
-				(jugador.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).kartSelected = PlayerPrefs.GetInt("kart");
-
-				jugador.transform.FindChild("Información").gameObject.GetComponent(TextMesh).text = PlayerPrefs.GetString("nombre");
-
-				var kart = new Transform[8];
-
-			    kart[0] = jugador.transform.FindChild("Rojo");
-				kart[1] = jugador.transform.FindChild("Azul");
-				kart[2] = jugador.transform.FindChild("Amarillo");
-				kart[3] = jugador.transform.FindChild("Verde");
-				kart[4] = jugador.transform.FindChild("Blanco");
-				kart[5] = jugador.transform.FindChild("Rosa");
-				kart[6] = jugador.transform.FindChild("Morado");
-				kart[7] = jugador.transform.FindChild("Negro");
-
-				for(var i : int = 0; i < kart.Length; i++)
-					kart[i].gameObject.SetActive(false);
-
-				kart[PlayerPrefs.GetInt("kart")].gameObject.SetActive(true);
-
-				(jugador.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).isSeted = true;
-			}
+			contador.SetActive(false);
+			(GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera = true;
+			return;
 		}
 	}
-}*/
+}
+
+@RPC
+function setPlayer() // Inicializa las preferencias del jugador en la sala. :)
+{
+	var kart = new Transform[8];
+
+    kart[0] = transform.FindChild("Rojo");
+	kart[1] = transform.FindChild("Azul");
+	kart[2] = transform.FindChild("Amarillo");
+	kart[3] = transform.FindChild("Verde");
+	kart[4] = transform.FindChild("Blanco");
+	kart[5] = transform.FindChild("Rosa");
+	kart[6] = transform.FindChild("Morado");
+	kart[7] = transform.FindChild("Negro");
+
+	for(var i : int = 0; i < kart.Length; i++)
+		kart[i].gameObject.SetActive(false);
+
+	kart[PlayerPrefs.GetInt("kart")].gameObject.SetActive(true);
+
+	transform.FindChild("Información").gameObject.GetComponent(TextMesh).text = PlayerPrefs.GetString("nombre");
+
+	(transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).kartSelected = PlayerPrefs.GetInt("kart");
+	(transform.FindChild("Información").gameObject.GetComponent("PlayerInfo") as PlayerInfo).nombre = PlayerPrefs.GetString("nombre");
+}

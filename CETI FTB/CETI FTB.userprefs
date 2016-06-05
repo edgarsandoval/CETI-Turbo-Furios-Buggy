@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\CargarCarro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Multiplayer\networkView.js">
     <Files>
+      <File FileName="Assets\Multiplayer\networkView.js" Line="20" Column="11" />
       <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="1" Column="1" />
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="125" Column="29" />
+      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="87" Column="2" />
+      <File FileName="Assets\Standard Assets\networking.js" Line="209" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
