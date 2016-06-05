@@ -4,7 +4,7 @@ using System.Collections;
 public class Trigger : MonoBehaviour {
 
 	public GameObject[] Armas; 
-	public GameObject PlayerPrefab;
+	public GameObject Player;
 	public static int actual = -1; // -1 = ninguna
 
 	void Start () {
@@ -17,7 +17,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider Check) {
-		if (Check.tag == "Player" || Check.tag == "IA") {
+		if (Check.tag == "Player") {
 			this.gameObject.SetActive (false);
 			actual = Random.Range (0, Armas.Length);
 		}
@@ -40,13 +40,12 @@ public class Trigger : MonoBehaviour {
 		case 3:
 			return "Aifon";
 			break;
-
 		}
 		return "";
 	}
 
 	public void soltar () {
-		GameObject arma = Instantiate (Armas [actual], PlayerPrefab.transform.position, Quaternion.identity) as GameObject;
+		GameObject arma = Instantiate (Armas [actual], Player.transform.position, Quaternion.identity) as GameObject;
 		arma.SetActive (true);
 		actual = -1;
 	}
@@ -58,6 +57,5 @@ public class Trigger : MonoBehaviour {
 		//arma.SetActive (true);
 		actual = -1;
 		// ? :c lanzar.rigidbody.AddForce (transform.forward * 2000 * 3);
-<<<<<<< HEAD
 	}*/
 }
