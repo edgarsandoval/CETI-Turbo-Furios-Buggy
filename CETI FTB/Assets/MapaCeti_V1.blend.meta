@@ -1,27 +1,42 @@
 fileFormatVersion: 2
-guid: 5fcae024a2c7fb340a3fffdded55d550
-timeCreated: 1464010262
+guid: 1b5d3ba7fbef52545afb54623c3162a8
+timeCreated: 1465146215
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Pista1
-    100004: Pista2
-    100006: pista3_007
-    400000: //RootNode
-    400002: Pista1
-    400004: Pista2
-    400006: pista3_007
-    2300000: Pista1
-    2300002: Pista2
-    2300004: pista3_007
-    3300000: Pista1
-    3300002: Pista2
-    3300004: pista3_007
-    4300000: Pista2
-    4300002: pista3_007
-    4300004: Pista1
+    100000: Cupula
+    100002: Cylinder_001
+    100004: Cylinder_002
+    100006: Cylinder_003
+    100008: Edificio-G
+    100010: Mapa
+    100012: //RootNode
+    400000: Cupula
+    400002: Cylinder_001
+    400004: Cylinder_002
+    400006: Cylinder_003
+    400008: Edificio-G
+    400010: Mapa
+    400012: //RootNode
+    2300000: Cupula
+    2300002: Cylinder_001
+    2300004: Cylinder_002
+    2300006: Cylinder_003
+    2300008: Edificio-G
+    2300010: Mapa
+    3300000: Cupula
+    3300002: Cylinder_001
+    3300004: Cylinder_002
+    3300006: Cylinder_003
+    3300008: Edificio-G
+    3300010: Mapa
+    4300000: Cupula
+    4300002: Edificio-G
+    4300004: Cylinder_003
+    4300006: Cylinder_002
+    4300008: Cylinder_001
+    4300010: Mapa
     7400000: Default Take
     9500000: //RootNode
   materials:

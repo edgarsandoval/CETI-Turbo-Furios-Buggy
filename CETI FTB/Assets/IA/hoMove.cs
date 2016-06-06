@@ -8,8 +8,10 @@ using Holoville.HOTween.Plugins;
 [AddComponentMenu("Simple Waypoint System/hoMove")]
 public class hoMove : MonoBehaviour
 {
+	//time or speed value
+	public float speed = 18.5f;
     //which path to call
-    public static PathManager pathContainer;
+    public PathManager pathContainer;
     //animation path type, linear or curved, curved by default
     public PathType pathtype = PathType.Curved;
     //should this gameobject start to walk on game launch?
@@ -42,10 +44,7 @@ public class hoMove : MonoBehaviour
     {
         time,
         speed
-    }
-    //time or speed value
-    public float speed = 19;
-
+	}
     //animation easetype
     public Holoville.HOTween.EaseType easetype = Holoville.HOTween.EaseType.Linear;
     //animation looptype
@@ -716,7 +715,7 @@ public class hoMove : MonoBehaviour
         return opt;
     }
 
-	public static void setPath (PathManager ruta) {
+	public void setPath (PathManager ruta) {
 		pathContainer = ruta;
 	}
 }

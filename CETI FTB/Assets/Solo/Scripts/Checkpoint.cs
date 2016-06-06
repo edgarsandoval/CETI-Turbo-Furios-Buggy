@@ -3,17 +3,20 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour {
 
-	void Start () {
-	
+	public GameObject SiguienteCheck;
+
+	void Awake () {
+		this.gameObject.SetActive (false);
 	}
 
 	void Update () {
-	
+
 	}
 
 	void OnTriggerEnter (Collider Check) {
 		if (Check.tag == "Player") {
-			Carreras.vuelta++;	
+			this.gameObject.SetActive (false);
+			SiguienteCheck.SetActive (true);
 		}
 	}
 }

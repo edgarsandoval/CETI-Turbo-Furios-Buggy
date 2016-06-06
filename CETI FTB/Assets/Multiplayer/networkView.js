@@ -2,7 +2,6 @@
 
 private var couroutineStarted = false;
 private var tiempo = 3;
-private var contador : GameObject;
 
 function Awake()
 {
@@ -15,8 +14,6 @@ function Awake()
 
 function Start()
 {
-	contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
-	Debug.Log(contador);
 	if(GetComponent.<NetworkView>().isMine)
 	{
 		GetComponent.<NetworkView>().RPC("setPlayer", RPCMode.AllBuffered);
@@ -48,20 +45,17 @@ function retardo(t : float) : IEnumerator
 function iniciarCuenta()
 {
 	(GameObject.Find("Scripts").GetComponent("networking") as networking).waiting = false;
-	while(true)
+	GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject.SetActive(true);
+
+	if(!couroutineStarted)
+         StartCoroutine(retardo(1));
+
+	(GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject.GetComponent("Text") as Text).text = tiempo > 0 ? tiempo.ToString() : "Corre!";
+
+	if(tiempo == -1)
 	{
-		Debug.Log(tiempo);
-		if(!couroutineStarted)
-	         StartCoroutine(retardo(1));
-
-	    (contador.GetComponent("Text") as Text).text = tiempo > 0 ? tiempo.ToString() : "Corre!";
-
-		if(tiempo == -1)
-		{
-			contador.SetActive(false);
-			(GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera = true;
-			return;
-		}
+		GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject.SetActive(false);
+		(GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo") as CarreraInfo).iniciarCarrera = true;
 	}
 }
 

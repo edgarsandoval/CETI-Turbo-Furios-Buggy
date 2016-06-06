@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\CuentaRegresiva1.js" />
-     <Compile Include="Assets\Standard Assets\SpiderAI.js" />
+     <Compile Include="Assets\Standard Assets\SpiderIA.js" />
+     <Compile Include="Assets\Standard Assets\SpiderPlayer.js" />
      <Compile Include="Assets\Standard Assets\networking.js" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
