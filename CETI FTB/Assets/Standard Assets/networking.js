@@ -25,18 +25,21 @@ private var serverName = "";
 private var serverInfo = "";
 private var serverPass = "";
 private var playerName = "";
+private var kartSelected = 0;
 private var clientPass = "";
 private var scrollPosition : Vector2 = Vector2.zero;
 
-private var spawnPoints : Vector3[,] = new Vector3[3, 8];
+private var spawnPoints : Vector3[,] = new Vector3[4, 8];
 
 function Start()
 {
 	spawnPoints[0, 0] = Vector3 (50.64661f, 4.401484f, 11.26688f);
 	spawnPoints[1, 0] = Vector3 (267.274f, 13.80426f, -71.75798f);
 	spawnPoints[2, 0] = Vector3 (310f, 19.6f, 175.7f);
+	spawnPoints[3, 0] = Vector3 (-88.6f, 13.3f, 235.6f);
 
 	playerName = PlayerPrefs.HasKey("nombre") || PlayerPrefs.GetString("nombre") != "" ? PlayerPrefs.GetString("nombre") : "NuevoJugador" + Random.Range(0, 50); 
+	kartSelected = PlayerPrefs.HasKey("kart") ? PlayerPrefs.GetInt("kart") : 0;
 } 
  
 function OnGUI ()
@@ -159,7 +162,7 @@ function OnGUI ()
         	GUI.Box(Rect(100, 100, 575, 450), "");
 	        GUI.Label(Rect(Screen.width / 2 - 100, Screen.height/2 - 11, 200,22), "Jugadores en la sala : " + (Network.connections.Length + 1) + "/" + (Network.maxConnections + 1), titleGUIStyle);
 
-	        if(Network.connections.Length > 1)
+	        if(Network.connections.Length > 0)
 		        if (GUI.Button(Rect(Screen.width/2 - 110,Screen.height/2 + 150, 220, 80),"Iniciar Carrera", buttonGUISytle))
 		        {
 		            iniciarCarrera();
@@ -205,7 +208,6 @@ function startServer ()
 public function iniciarCarrera()
 {
 	waiting = false;
-	GameObject.FindGameObjectWithTag("RaceInfo").GetComponent("CarreraInfo").iniciarCarrera = true;
 }
 
 function OnServerInitialized ()
@@ -229,28 +231,8 @@ function lobbySpawn()
     //yield WaitForSeconds(0.1);
     var made = Network.Instantiate(playerPrefab, DP(Network.connections.Length), Quaternion.Euler (0, 190, 0), 0);
 
-    kart = new Transform[8];
-
-    kart[0] = made.transform.FindChild("Rojo");
-	kart[1] = made.transform.FindChild("Azul");
-	kart[2] = made.transform.FindChild("Amarillo");
-	kart[3] = made.transform.FindChild("Verde");
-	kart[4] = made.transform.FindChild("Blanco");
-	kart[5] = made.transform.FindChild("Rosa");
-	kart[6] = made.transform.FindChild("Morado");
-	kart[7] = made.transform.FindChild("Negro");
-
-	for(var i : int = 0; i < kart.Length; i++)
-		kart[i].gameObject.SetActive(false);
-
-	kart[PlayerPrefs.GetInt("kart")].gameObject.SetActive(true);
-
-	made.transform.FindChild("Información").gameObject.GetComponent(TextMesh).text = PlayerPrefs.GetString("nombre");
-
-	made.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo").kartSelected = PlayerPrefs.GetInt("kart");
-	made.transform.FindChild("Información").gameObject.GetComponent("PlayerInfo").nombre = PlayerPrefs.GetString("nombre");
-
     PlayerPrefs.SetString("nombre", playerName);
+    PlayerPrefs.SetInt("kart", kartSelected);
 }
 
 function refreshHostList ()

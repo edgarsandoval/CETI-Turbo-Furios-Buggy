@@ -46,6 +46,12 @@ public class CargarCarro : MonoBehaviour {
 			carro.transform.rotation = Quaternion.Euler (0, 180, 0);
 			spawnPoint = spawnPosition;
 			break;
+		case 4:
+			spawnPosition = new Vector3 (-88.6f, 13.3f, 235.6f);
+			carro.transform.position = spawnPosition;
+			carro.transform.rotation = Quaternion.Euler (0, 180, 0);
+			spawnPoint = spawnPosition;
+			break;
 		}
 
 		// Detiene al jugador
@@ -75,6 +81,7 @@ public class CargarCarro : MonoBehaviour {
 					crearOponente (i);
 				break;
 			case 3:
+			case 4:
 				for (int i = 0; i < 7; i++)
 					crearOponente (i);
 				break;
