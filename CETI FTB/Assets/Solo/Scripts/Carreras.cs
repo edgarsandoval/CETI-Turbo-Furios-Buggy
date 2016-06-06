@@ -8,6 +8,7 @@ public class Carreras : MonoBehaviour {
 	public GameObject Ganador; 
 	public GameObject Perdedor;
 	public GameObject Boton;
+	private GameObject aux;
 
 	void Start () {
 		pista = PlayerPrefs.GetInt ("mapa");
@@ -24,7 +25,14 @@ public class Carreras : MonoBehaviour {
 			final (14);
 			break;
 		case 3:
+			aux = GameObject.Find ("Pista").transform.FindChild ("Pista4").gameObject;
+			aux.SetActive (false);
 			final (18);
+			break;
+		case 4:
+			aux = GameObject.Find ("Pista").transform.FindChild ("Pista3").gameObject;
+			aux.SetActive (false);
+			final (4);
 			break;
 		}
 	}
