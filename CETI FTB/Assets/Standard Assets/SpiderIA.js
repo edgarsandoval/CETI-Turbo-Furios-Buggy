@@ -24,7 +24,7 @@ function HitTestWithRoad() {
     Debug.DrawLine(ray.origin, ray.origin + ray.direction * distance, Color.red);
     var inGround:boolean = false;
     if (Physics.Raycast(ray, hit, distance)) {
-        if (hit.collider.tag == 'road'){
+        if (hit.collider.tag == 'road') {
             inGround = true;
             this.transform.position = hit.point;
             

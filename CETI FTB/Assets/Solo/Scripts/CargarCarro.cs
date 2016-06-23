@@ -8,6 +8,8 @@ public class CargarCarro : MonoBehaviour {
 	public GameObject[] kart;
 	public PathManager[] pistasIA;
 	public int kartSelected = 0;
+	public GameObject[] pistaAux;
+	public GameObject colisionador;
 
 	private Vector3 spawnPoint;
 	private int mapa;
@@ -19,7 +21,7 @@ public class CargarCarro : MonoBehaviour {
 	void Start ()
 	{
 		contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
-		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
+		mapa = 3;//PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
 
 		for (int i = 0; i < kart.Length; i++)
@@ -35,19 +37,23 @@ public class CargarCarro : MonoBehaviour {
 			spawnPoint = spawnPosition;
 			break;
 		case 2:
-			spawnPosition = new Vector3 (267.274f, 13.80426f, -71.75798f);
+			spawnPosition = new Vector3 (257.9f, 13.80426f, -71.75798f);
 			carro.transform.position = spawnPosition;
 			carro.transform.rotation = Quaternion.Euler (0, 180, 0);
 			spawnPoint = spawnPosition;
 			break;
 		case 3:
-			spawnPosition = new Vector3 (310f, 19.6f, 175.7f);
+			pistaAux [0].SetActive (true);
+			pistaAux [1].SetActive (false);
+			spawnPosition = new Vector3 (302.5f, 15.63f, 175.7f);
 			carro.transform.position = spawnPosition;
 			carro.transform.rotation = Quaternion.Euler (0, 180, 0);
 			spawnPoint = spawnPosition;
 			break;
 		case 4:
-			spawnPosition = new Vector3 (-88.6f, 13.3f, 235.6f);
+			pistaAux [1].SetActive (true);
+			pistaAux [0].SetActive (false);
+			spawnPosition = new Vector3 (-102.4f, 13.3f, 235.6f);
 			carro.transform.position = spawnPosition;
 			carro.transform.rotation = Quaternion.Euler (0, 180, 0);
 			spawnPoint = spawnPosition;
@@ -81,9 +87,11 @@ public class CargarCarro : MonoBehaviour {
 					crearOponente (i);
 				break;
 			case 3:
-			case 4:
 				for (int i = 0; i < 7; i++)
 					crearOponente (i);
+				break;
+			case 4:
+				crearOponente (7);
 				break;
 			}
 			tiempo--;
@@ -115,6 +123,19 @@ public class CargarCarro : MonoBehaviour {
 		go.transform.rotation = carro.transform.rotation;
 		go.transform.localScale = carro.transform.localScale;
 
+		go.AddComponent<CapsuleCollider> ();
+		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, -0.1f, 0.0f);
+		go.GetComponent<CapsuleCollider> ().direction = 2;
+		go.GetComponent<CapsuleCollider> ().radius = 0.25f;
+		go.GetComponent<CapsuleCollider> ().height = 0.75f;
+
+		go.AddComponent<Rigidbody> ();
+		go.GetComponent<Rigidbody> ().mass = 10;
+		go.GetComponent<Rigidbody> ().drag = 4;
+		go.GetComponent<Rigidbody> ().angularDrag = 6;
+		go.GetComponent<Rigidbody> ().useGravity = false;
+
+		/*
 		GameObject capsula = GameObject.CreatePrimitive(PrimitiveType.Capsule);
 
 		// Set Mesh Filter
@@ -122,8 +143,12 @@ public class CargarCarro : MonoBehaviour {
 		go.GetComponent<MeshFilter> ().mesh = capsula.GetComponent<MeshFilter> ().mesh;
 
 		// Set Character Collider
-		go.AddComponent<CharacterController>();
 		Destroy (capsula);
+
+		go.AddComponent<CharacterController>();
+		go.GetComponent<CharacterController> ().radius = 0.3f;
+		go.GetComponent<CharacterController> ().height = 1.0f;
+		*/
 
 		// Añade script movimiento
 		go.AddComponent<hoMove>();
@@ -137,7 +162,6 @@ public class CargarCarro : MonoBehaviour {
 		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -80, 0)) as GameObject;
 		oponente.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 		oponente.SetActive (true);
-		//oponente.AddComponent<MeshCollider> ();
 		oponente.transform.parent = go.transform;
 	}
 
@@ -151,6 +175,9 @@ public class CargarCarro : MonoBehaviour {
 			break;
 		case 3:
 			return Random.Range (5, 8);
+			break;
+		case 4:
+			return Random.Range (8, 11);
 			break;
 		}
 		return 0;

@@ -8,6 +8,15 @@ public class CarSelector : MonoBehaviour
 	public GameObject[] kart;
 	public int kartSelected = 0; 
 	public InputField txtNombre;
+	private int progreso = 0;
+	public GameObject guardar;
+
+	void Update() {
+		if (progreso != 4 && kartSelected == 7)
+			guardar.SetActive (false);
+		else 
+			guardar.SetActive (true);
+	}
 
 	void Start()
 	{
@@ -15,7 +24,8 @@ public class CarSelector : MonoBehaviour
 			kartSelected =  PlayerPrefs.GetInt ("kart");
 		if (PlayerPrefs.HasKey ("nombre")) 
 			txtNombre.text = PlayerPrefs.GetString ("nombre");
-		
+		if (PlayerPrefs.HasKey ("progreso")) 
+			progreso = PlayerPrefs.GetInt ("progreso");
 		showSelectedKart ();
 	}
 
@@ -29,9 +39,9 @@ public class CarSelector : MonoBehaviour
 	}
 
 	public void Seleccionar()
-	{
+	{		
 		PlayerPrefs.SetInt ("kart", kartSelected);
-		Application.LoadLevel("Menu");
+		Application.LoadLevel ("Menu");
 	}
 
 	public void Regresar()

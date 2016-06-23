@@ -1,4 +1,9 @@
-﻿public function BotonJugar()
+﻿function Start() {
+	//PlayerPrefs.DeleteAll();
+	/* La borradora */
+}
+
+public function BotonJugar()
 {
 	Application.LoadLevel("SelectorMapa");
 }
