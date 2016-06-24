@@ -96,7 +96,6 @@ public class CargarCarro : MonoBehaviour {
 			}
 			tiempo--;
 		}
-
 		contador.SetActive (true);
 	}
 
@@ -124,16 +123,18 @@ public class CargarCarro : MonoBehaviour {
 		go.transform.localScale = carro.transform.localScale;
 
 		go.AddComponent<CapsuleCollider> ();
-		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, -0.1f, 0.0f);
+		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, -0.2f, 0.0f);
 		go.GetComponent<CapsuleCollider> ().direction = 2;
 		go.GetComponent<CapsuleCollider> ().radius = 0.25f;
-		go.GetComponent<CapsuleCollider> ().height = 0.75f;
+		go.GetComponent<CapsuleCollider> ().height = 0.8f;
 
 		go.AddComponent<Rigidbody> ();
 		go.GetComponent<Rigidbody> ().mass = 10;
 		go.GetComponent<Rigidbody> ().drag = 4;
 		go.GetComponent<Rigidbody> ().angularDrag = 6;
 		go.GetComponent<Rigidbody> ().useGravity = false;
+		go.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeRotationX;
+		go.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeRotationZ;
 
 		/*
 		GameObject capsula = GameObject.CreatePrimitive(PrimitiveType.Capsule);
@@ -153,13 +154,13 @@ public class CargarCarro : MonoBehaviour {
 		// Añade script movimiento
 		go.AddComponent<hoMove>();
 		// Añade tag necesario para vueltas
-		go.tag = "IA";
+		go.tag = (mapa == 4) ? "IAFinal" : "IA";
 		// Añade script para añadirlo al suelo
 		go.AddComponent<SpiderIA> ();
 		// Añade una ruta
 		go.GetComponent<hoMove> ().setPath (pistasIA[AddRuta()]);
 
-		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -80, 0)) as GameObject;
+		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -89, 0)) as GameObject;
 		oponente.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 		oponente.SetActive (true);
 		oponente.transform.parent = go.transform;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SelectorMapa/SelectorMapa.unity
+- path: Assets/Solo/Mapa.unity
   isLoaded: 1
   isActive: 1

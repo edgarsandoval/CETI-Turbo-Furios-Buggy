@@ -3,17 +3,22 @@ using System.Collections;
 
 public class MetaIA : MonoBehaviour {
 
+	private int mapa;
+
 	void Awake () {
 		this.gameObject.SetActive (true);
 	}
 
-	void Update () {
-
+	void Start () {
+		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 	}
 
 	void OnTriggerEnter (Collider Check) {
-		if (Check.tag == "IA") {
+		if (Check.tag == "IA" || Check.tag == "IAFinal") {
 			Carreras.vueltaIA++;
+		}
+		if (Check.tag == "IAFinal") {
+			GameObject.FindGameObjectWithTag("IAFinal").GetComponent<hoMove> ().setPath (Random.Range (8, 11));
 		}
 	}
 }
