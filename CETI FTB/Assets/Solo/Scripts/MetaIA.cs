@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MetaIA : MonoBehaviour {
 
-	private int mapa;
+	public int mapa;
+	public PathManager[] pistasIA;
 
 	void Awake () {
 		this.gameObject.SetActive (true);
@@ -18,7 +19,8 @@ public class MetaIA : MonoBehaviour {
 			Carreras.vueltaIA++;
 		}
 		if (Check.tag == "IAFinal") {
-			GameObject.FindGameObjectWithTag("IAFinal").GetComponent<hoMove> ().setPath (Random.Range (8, 11));
+			GameObject oponente = GameObject.FindGameObjectWithTag ("IAFinal");
+			oponente.GetComponent<hoMove> ().setPath (pistasIA[Random.Range (0, 3)]);
 		}
 	}
 }
