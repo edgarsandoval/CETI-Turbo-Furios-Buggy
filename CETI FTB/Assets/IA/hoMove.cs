@@ -23,10 +23,10 @@ public class hoMove : MonoBehaviour
     //should this gameobject look to its target point?
     public bool orientToPath = true;
     //is this gameobject parented to or should move with the path?
-    public bool local = false;
+	public bool local = true; // default false
 
     //lookAhead value used by orientToPath (0-1), 0 means restrict to path
-    public float lookAhead = 0;
+	public float lookAhead = 0; // default 0
     //custom object size to add
     public float sizeToAdd = 0;
     //delay at each waypoint

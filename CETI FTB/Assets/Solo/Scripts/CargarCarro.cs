@@ -21,7 +21,7 @@ public class CargarCarro : MonoBehaviour {
 	void Start ()
 	{
 		contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
-		mapa = 4;//PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
+		mapa = 1;//PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
 
 		for (int i = 0; i < kart.Length; i++)
@@ -123,7 +123,7 @@ public class CargarCarro : MonoBehaviour {
 		go.transform.localScale = carro.transform.localScale;
 
 		go.AddComponent<CapsuleCollider> ();
-		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, 0.6f, 0.0f);
+		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, 0.35f, 0.0f);
 		go.GetComponent<CapsuleCollider> ().direction = 2;
 		go.GetComponent<CapsuleCollider> ().radius = 0.25f;
 		go.GetComponent<CapsuleCollider> ().height = 0.8f;
