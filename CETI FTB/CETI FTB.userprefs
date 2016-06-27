@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\Carreras.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\CargarCarro.cs">
     <Files>
-      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="34" Column="10" />
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="79" Column="35" />
+      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="27" Column="40" />
+      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="46" Column="74" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

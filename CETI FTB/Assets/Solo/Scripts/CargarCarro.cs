@@ -21,7 +21,7 @@ public class CargarCarro : MonoBehaviour {
 	void Start ()
 	{
 		contador = GameObject.Find ("Canvas").transform.FindChild("Contador").gameObject;
-		mapa = 1;//PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
+		mapa = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		kartSelected =  PlayerPrefs.HasKey ("kart") ? PlayerPrefs.GetInt ("kart") : 1;
 
 		for (int i = 0; i < kart.Length; i++)
