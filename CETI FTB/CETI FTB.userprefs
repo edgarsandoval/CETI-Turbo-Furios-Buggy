@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\CargarCarro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\Carreras.cs">
     <Files>
-      <File FileName="Assets\IA\hoMove.cs" Line="81" Column="3" />
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="96" Column="5" />
-      <File FileName="Assets\Solo\Scripts\MetaIA.cs" Line="23" Column="77" />
+      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="34" Column="10" />
+      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="79" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

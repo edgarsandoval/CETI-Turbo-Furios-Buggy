@@ -9,6 +9,11 @@ public class Carreras : MonoBehaviour {
 	public GameObject Perdedor;
 	public GameObject Boton;
 
+	void Awake()
+	{
+		InvokeRepeating ("cambioVelocidad", 4, 1f);
+	}
+
 	void Start () {
 		pista = PlayerPrefs.GetInt ("mapa");
 		vuelta = 0; 
@@ -30,6 +35,18 @@ public class Carreras : MonoBehaviour {
 			final (4);
 			break;
 		}
+	}
+
+	public void cambioVelocidad()
+	{
+		GameObject[] IA = GameObject.FindGameObjectsWithTag ("IA");
+		GameObject jugador = GameObject.FindWithTag ("Player");
+
+
+		jugador.GetComponent<SpiderPlayer>().forwardSpeed = Random.Range (2f, 4f);
+
+		for (int i = 0; i < IA.Length; i++)
+			IA[i].GetComponent<hoMove> ().speed = Random.Range(18f, 19f);
 	}
 
 	public void final(int vueltas) {
