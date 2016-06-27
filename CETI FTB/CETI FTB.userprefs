@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Solo\Scripts\CargarCarro.cs">
     <Files>
-      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="27" Column="40" />
-      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="46" Column="74" />
+      <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="127" Column="68" />
+      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

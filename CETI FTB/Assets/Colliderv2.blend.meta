@@ -12,6 +12,9 @@ ModelImporter:
     100008: Pista1
     100010: Pista2
     100012: Pista3
+    100014: Pista1_001
+    100016: Pista2_001
+    100018: Pista3_001
     400000: //RootNode
     400002: Curve1
     400004: Curve2
@@ -19,24 +22,36 @@ ModelImporter:
     400008: Pista1
     400010: Pista2
     400012: Pista3
+    400014: Pista1_001
+    400016: Pista2_001
+    400018: Pista3_001
     2300000: Curve1
     2300002: Curve2
     2300004: Curve3
     2300006: Pista1
     2300008: Pista2
     2300010: Pista3
+    2300012: Pista1_001
+    2300014: Pista2_001
+    2300016: Pista3_001
     3300000: Curve1
     3300002: Curve2
     3300004: Curve3
     3300006: Pista1
     3300008: Pista2
     3300010: Pista3
+    3300012: Pista1_001
+    3300014: Pista2_001
+    3300016: Pista3_001
     4300000: Curve2
     4300002: Pista2
     4300004: Curve1
     4300006: Pista1
     4300008: Curve3
     4300010: Pista3
+    4300012: Pista3_001
+    4300014: Pista1_001
+    4300016: Pista2_001
     7400000: Default Take
     9500000: //RootNode
   materials:
