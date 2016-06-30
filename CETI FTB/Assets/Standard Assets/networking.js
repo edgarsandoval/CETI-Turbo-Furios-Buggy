@@ -7,12 +7,12 @@ var textFieldGUIStyle : GUIStyle;
 var titleGUIStyle : GUIStyle;
 /*                         */
 
-var gameName : String = "Sin nombre"; 
+var gameName : String = "CETI - FTB"; 
 	
 var refreshing = false; 
-var hostData : HostData[]; // a list of all current hosts
+var hostData : HostData[];
 
-var playerPrefab : GameObject; // your player
+var playerPrefab : GameObject;
 var raceInfo : GameObject;
  
 private var kart : Transform[];
@@ -34,11 +34,11 @@ private var spawnPoints : Vector3[,] = new Vector3[4, 8];
 function Start()
 {
 	spawnPoints[0, 0] = Vector3 (50.64661f, 4.401484f, 11.26688f);
-	spawnPoints[1, 0] = Vector3 (267.274f, 13.80426f, -71.75798f);
-	spawnPoints[2, 0] = Vector3 (310f, 19.6f, 175.7f);
-	spawnPoints[3, 0] = Vector3 (-88.6f, 13.3f, 235.6f);
+	spawnPoints[1, 0] = Vector3 (257.9f, 13.80426f, -71.75798f);
+	spawnPoints[2, 0] = Vector3 (302.5f, 15.63f, 175.7f);
+	spawnPoints[3, 0] = Vector3 (-102.4f, 13.3f, 235.6f);
 
-	playerName = PlayerPrefs.HasKey("nombre") || PlayerPrefs.GetString("nombre") != "" ? PlayerPrefs.GetString("nombre") : "NuevoJugador" + Random.Range(0, 50); 
+	playerName = PlayerPrefs.HasKey("nombre") || PlayerPrefs.GetString("nombre") != "" ? PlayerPrefs.GetString("nombre") : "SinNombre"; 
 	kartSelected = PlayerPrefs.HasKey("kart") ? PlayerPrefs.GetInt("kart") : 0;
 } 
  
