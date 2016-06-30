@@ -3,17 +3,16 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Carreras : MonoBehaviour {
-	public int pista = 1;
+	private int pista;
 	public static int vuelta = 0, vueltaIA = 0;
 	public GameObject Ganador; 
 	public GameObject Perdedor;
 	public GameObject Boton;
 
-	void Awake()
-	{
+	void Awake() {
 		InvokeRepeating ("cambioVelocidad", 4, 1f);
-
 	}
+
 	void Start () {
 		pista = PlayerPrefs.HasKey ("mapa") ? PlayerPrefs.GetInt ("mapa") : 1;
 		vuelta = 0; 

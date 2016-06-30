@@ -110,7 +110,7 @@ function OnGUI ()
                 GUI.Label(Rect(30,0,100,20),"Nombre", labelGUIStyle);
                 GUI.Label(Rect(150,0,100,20),"Informacion", labelGUIStyle);
                 GUI.Label(Rect(240,0,100,20),"Jugadores", labelGUIStyle);
-                GUI.Label(Rect(360	,0,100,20),"Contraseña", labelGUIStyle);
+                GUI.Label(Rect(360,0,100,20),"Contraseña", labelGUIStyle);
 
                 for(var i = 0; i < hostData.length; i++)
                 {
