@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Armas\Trigger.cs" />
+     <Compile Include="Assets\IA\ColisionIA.cs" />
      <Compile Include="Assets\IA\PathManager.cs" />
      <Compile Include="Assets\IA\PixelPlacement\iTween.cs" />
      <Compile Include="Assets\IA\WaypointManager.cs" />

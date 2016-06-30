@@ -125,16 +125,7 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<BoxCollider> ();
 		go.GetComponent<BoxCollider> ().center = new Vector3 (0.0f, 0.35f, 0.0f);
 		go.GetComponent<BoxCollider> ().size = new Vector3 (0.4f, 1f, 0.7f);
-		//go.GetComponent<BoxCollider> ().direction = 2;
-		//go.GetComponent<BoxCollider> ().radius = 0.25f;
-		//go.GetComponent<BoxCollider> ().height = 0.8f;
-		/*
-		go.AddComponent<CapsuleCollider> ();
-		go.GetComponent<CapsuleCollider> ().center = new Vector3 (0.0f, 0.35f, 0.0f);
-		go.GetComponent<CapsuleCollider> ().direction = 2;
-		go.GetComponent<CapsuleCollider> ().radius = 0.25f;
-		go.GetComponent<CapsuleCollider> ().height = 0.8f;
-		*/
+		go.AddComponent<ColisionIA> ();
 
 		go.AddComponent<Rigidbody> ();
 		go.GetComponent<Rigidbody> ().mass = 10;
@@ -143,24 +134,6 @@ public class CargarCarro : MonoBehaviour {
 		go.GetComponent<Rigidbody> ().useGravity = false;
 
 		go.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeRotationZ;
-		/*
-		go.AddComponent<WheelCollider> ();
-		go.GetComponent<WheelCollider> ().center = new Vector3 (0.0f, 0.5f, 0.0f);
-
-		GameObject capsula = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-
-		// Set Mesh Filter
-		go.AddComponent<MeshFilter> ();
-		go.GetComponent<MeshFilter> ().mesh = capsula.GetComponent<MeshFilter> ().mesh;
-
-		// Set Character Collider
-		Destroy (capsula);
-
-		go.AddComponent<CharacterController>();
-		go.GetComponent<CharacterController> ().radius = 0.3f;
-		go.GetComponent<CharacterController> ().height = 1.0f;
-		*/
-
 		// Añade script movimiento
 		go.AddComponent<hoMove>();
 		// Añade tag necesario para vueltas
@@ -169,16 +142,11 @@ public class CargarCarro : MonoBehaviour {
 		go.AddComponent<SpiderIA> ();
 		// Añade una ruta
 		go.GetComponent<hoMove> ().setPath (pistasIA[AddRuta()]);
-
+		// Añade kart
 		GameObject oponente = Instantiate (kart[i], spawnPoint, Quaternion.Euler (-90, -89, 10)) as GameObject;
 		oponente.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 		oponente.SetActive (true);
 		oponente.transform.parent = go.transform;
-		/*
-		GameObject collider = Instantiate (colisionador, spawnPoint, Quaternion.Euler (-90, -89, 10)) as GameObject;
-		collider.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
-		collider.SetActive (true);
-		collider.transform.parent = go.transform;*/
 	}
 
 	private int AddRuta() {
