@@ -36,11 +36,14 @@ public class Carreras : MonoBehaviour {
 		}
 	}
 
+	/*
+	 * Cambia la velocidad del jugador
+	 * GameObject jugador = GameObject.FindWithTag ("Player");
+	 * jugador.GetComponent<SpiderPlayer>().forwardSpeed = Random.Range (2f, 2.5f);
+	*/
 	public void cambioVelocidad()
 	{
 		GameObject[] IA = GameObject.FindGameObjectsWithTag ("IA");
-		GameObject jugador = GameObject.FindWithTag ("Player");
-		jugador.GetComponent<SpiderPlayer>().forwardSpeed = Random.Range (2f, 2.5f);
 		for (int i = 0; i < IA.Length; i++)
 			IA[i].GetComponent<hoMove> ().speed = Random.Range(17f, 19f);
 	}

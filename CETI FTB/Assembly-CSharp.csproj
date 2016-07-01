@@ -166,7 +166,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="HOTween">
- <HintPath>C:/Users/Edgar Sandoval/Documents/GitHub/CETI-Turbo-Furios-Buggy/CETI FTB/Assets/IA/Holoville/HOTween.dll</HintPath>
+ <HintPath>C:/Users/sgzad/Documents/CETI-Turbo-Furios-Buggy/CETI FTB/Assets/IA/Holoville/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

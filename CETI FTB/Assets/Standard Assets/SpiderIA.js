@@ -3,17 +3,13 @@ public var steerAngle:Number;
 public var rotationT:float = 0.25;
 
 function FixedUpdate () {
-	var x;//:Number = Input.GetAxis("Horizontal");
-	var y;//:Number = Input.GetAxis("Vertical");
-
 	if (HitTestWithRoad()) {}
 	//this.GetComponent.<Rigidbody>().velocity += y * transform.forward * forwardSpeed;
-		
 	//this.GetComponent.<Rigidbody>().AddTorque(transform.up * x * steerAngle, ForceMode.Acceleration);
 }
 
-public var distance:float = 2.0;
-public var smoothRatio:float = 0.2;
+public var distance:float = 3.0;
+public var smoothRatio:float = 0.5;
 
 function HitTestWithRoad() {
     var position:Vector3 = transform.position + transform.TransformDirection(Vector3.up) * 0.2;
@@ -36,7 +32,7 @@ function HitTestWithRoad() {
             
             var targetQ:Quaternion;
             //TODO: Using "velocity.normalize" instead of "Vector3(0, 1.0, 1.0)"
-            var fPosition:Vector3 = transform.position + transform.TransformDirection(Vector3(0, 1.0, 1.0));
+            var fPosition:Vector3 = transform.position + transform.TransformDirection(Vector3(0, 0.0, 0.0));
             var fDirection:Vector3 = transform.TransformDirection(Vector3.down);
             var fRay:Ray = new Ray(fPosition, fDirection);
             var fHit:RaycastHit;

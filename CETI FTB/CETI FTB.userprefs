@@ -1,11 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\networking.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\SpiderIA.js">
     <Files>
+      <File FileName="Assets\Solo\Scripts\Carreras.cs" Line="55" Column="1" />
       <File FileName="Assets\Standard Assets\networking.js" Line="142" Column="18" />
       <File FileName="Assets\Menu\AjusteGrafico.js" Line="1" Column="1" />
       <File FileName="Assets\Solo\Scripts\CargarCarro.cs" Line="1" Column="1" />
-      <File FileName="Assets\SelectorMapa\MapSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets\SelectorMapa\MapSelector.cs" Line="34" Column="1" />
+      <File FileName="Assets\Standard Assets\SpiderIA.js" Line="11" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
