@@ -1,10 +1,10 @@
 ﻿@script ExecuteInEditMode()
 
-/* Declare a GUI Style */
-var buttonGUISytle : GUIStyle;
+/* Estilos */
 var labelGUIStyle : GUIStyle;
-var textFieldGUIStyle : GUIStyle;
 var titleGUIStyle : GUIStyle;
+var fontMenu : Font; 
+var textFont : Font;
 /*                         */
 
 var gameName : String = "CETI - FTB"; 
@@ -44,17 +44,21 @@ function Start()
  
 function OnGUI ()
 {
+	GUI.skin.button.font = fontMenu;
+	GUI.skin.button.fontSize = 36;
+
+	GUI.skin.textField.font = textFont;
     if(!Network.isClient && !Network.isServer)
     {
         // Si no estás como cliente ni como servidor, entra al menú principal del mulijugador. 
         if(!create && !joining && !waiting)
         {
-            if (GUI.Button(Rect(Screen.width/2 - 125, Screen.height / 2 - 85, 250, 100),"Crear Juego", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/2 - 125, Screen.height / 2 - 85, 230, 60),"Crear Juego"))
             {
                 create = true;
             }
      
-            if (GUI.Button(Rect(Screen.width/2 - 125, Screen.height/2 + 30, 250, 100), "Encontrar juego", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/2 - 125, Screen.height/2 + 30, 230, 60), "Encontrar juego"))
             {
                 joining = true;
                 refreshHostList();
@@ -64,7 +68,7 @@ function OnGUI ()
         if (create) // Al crear una partida, muestra el menú del servidor. 
         {
 
-            if (GUI.Button(Rect(Screen.width/2 - 100 , Screen.height/3 + 150, 200, 80),"Crear partida", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/2 - 100 , Screen.height/3 + 150, 200, 60),"Crear partida"))
             {
                 startServer();
             }
@@ -75,26 +79,26 @@ function OnGUI ()
 
             GUI.Label(Rect (Screen.width/2 - 50	,Screen.height/3 + 40, 120 ,20), "Selecciona un mapa:", labelGUIStyle);
 
-           	if (GUI.Button(Rect(Screen.width/3 - 170, Screen.height/3 + 65, 180, 80)," Primer Nivel", buttonGUISytle))
+           	if (GUI.Button(Rect(Screen.width/3 - 170, Screen.height/3 + 65, 180, 50)," Primer Nivel"))
             {
                 PlayerPrefs.SetInt("mapa", 1);
             }
 
-           	if (GUI.Button(Rect(Screen.width/3 + 50, Screen.height/3 + 65, 180, 80)," Segundo Nivel", buttonGUISytle))
+           	if (GUI.Button(Rect(Screen.width/3 + 50, Screen.height/3 + 65, 180, 50)," Segundo Nivel"))
             {
                 PlayerPrefs.SetInt("mapa", 2);
             }
 
-           	if (GUI.Button(Rect(Screen.width/3 + 260, Screen.height/3 + 65, 180, 80)," Tercer Nivel", buttonGUISytle))
+           	if (GUI.Button(Rect(Screen.width/3 + 260, Screen.height/3 + 65, 180, 50)," Tercer Nivel"))
             {
                 PlayerPrefs.SetInt("mapa", 3);
             }
 
-            serverName = GUI.TextField (Rect (Screen.width/2 - 130,Screen.height/3 - 50 + 30, 120, 30), serverName, 12, textFieldGUIStyle);
-            serverPass = GUI.PasswordField (Rect (Screen.width/2 + 30,Screen.height/3 - 50 + 30,120, 30), serverPass, "*"[0], 12, textFieldGUIStyle);
-            serverInfo = GUI.TextArea (Rect (Screen.width/2 - 100,Screen.height/ 3 + 300, 200, 60), serverInfo, 35, textFieldGUIStyle);
+            serverName = GUI.TextField (Rect (Screen.width/2 - 130,Screen.height/3 - 50 + 30, 120, 30), serverName, 12);
+            serverPass = GUI.PasswordField (Rect (Screen.width/2 + 30,Screen.height/3 - 50 + 30,120, 30), serverPass, "*"[0], 12);
+            serverInfo = GUI.TextArea (Rect (Screen.width/2 - 100,Screen.height/ 3 + 300, 200, 60), serverInfo, 35);
 
-            if (GUI.Button(Rect(Screen.width/1.2 - 25,Screen.height/20, 150, 100),"Atras", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/1.2 - 25,Screen.height/20, 100, 50),"Atras"))
             {
             	create = false;
             }
@@ -121,35 +125,40 @@ function OnGUI ()
 
                     if (hostData[i].passwordProtected)
                     {
-                        clientPass = GUI.PasswordField (Rect (360,30 + i * 30,100,25), clientPass, "*"[0], 12, textFieldGUIStyle);
+                        clientPass = GUI.PasswordField (Rect (360,30 + i * 30,100,25), clientPass, "*"[0], 12);
                     }
                      
-                    if (GUI.Button(Rect(480,30 + i * 30 - 10, 150, 50),"Entrar", buttonGUISytle))
+                    if (GUI.Button(Rect(480,30 + i * 30 - 10, 120, 60),"Entrar"))
                     {
                         Debug.Log(Network.Connect(hostData[i], clientPass))	;
                     }
                 }
 
                 GUI.EndScrollView ();
+
+                if (GUI.Button(Rect(Screen.width/2 - 125,Screen.height - 150, 250, 60),"Refrescar lista"))
+                {
+                    refreshHostList();
+                }
             }
                
             if(!hostData) // Si no hay servidores disponibles. :(
             {
                 GUI.Label(Rect(Screen.width/2 - 80,Screen.height/3,200,25),"Ningun juego encontrado. :(", labelGUIStyle);
-
-                if (GUI.Button(Rect(Screen.width/2 - 125,Screen.height/3 + 50, 250, 100),"Refrescar lista", buttonGUISytle))
+                	
+                if (GUI.Button(Rect(Screen.width/2 - 125,Screen.height - 150, 250, 60),"Refrescar lista"))
                 {
                     refreshHostList();
                 }
             }
        
-            if (GUI.Button(Rect(Screen.width/1.2 - 25,Screen.height/20, 150, 100),"Atras", buttonGUISytle))
+            if (GUI.Button(Rect(Screen.width/1.2 - 25,Screen.height/20, 100, 50),"Atras"))
             {
                   joining = false;
             }
         }
 
-        if (GUI.Button(Rect(Screen.width/20,Screen.height/20, 250, 100), "Regresar al menu", buttonGUISytle))
+        if (GUI.Button(Rect(Screen.width/20,Screen.height/20, 250, 50), "Regresar al menu"))
         {
             Application.LoadLevel("menu");
         }
@@ -163,7 +172,7 @@ function OnGUI ()
 	        GUI.Label(Rect(Screen.width / 2 - 100, Screen.height/2 - 11, 200,22), "Jugadores en la sala : " + (Network.connections.Length + 1) + "/" + (Network.maxConnections + 1), titleGUIStyle);
 
 	        if(Network.connections.Length > 0)
-		        if (GUI.Button(Rect(Screen.width/2 - 110,Screen.height/2 + 150, 220, 80),"Iniciar Carrera", buttonGUISytle))
+		        if (GUI.Button(Rect(Screen.width/2 - 110,Screen.height/2 + 150, 220, 80),"Iniciar Carrera"))
 		        {
 		            iniciarCarrera();
 		        }

@@ -75,4 +75,10 @@ public class Carreras : MonoBehaviour {
 		Time.timeScale = 1;
 		AudioListener.volume = 1;
 	}
+
+	public void regresar()
+	{
+		PlayerPrefs.SetString ("nextScene", "MapaMultijugador");
+		Application.LoadLevel ("Transicion");
+	}
 }

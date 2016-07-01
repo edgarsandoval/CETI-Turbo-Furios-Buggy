@@ -40,4 +40,9 @@ public class MapSelector : MonoBehaviour
 		PlayerPrefs.SetString ("nextScene", "Mapa");
 		Application.LoadLevel ("Transicion");
 	}
+
+	public void regresarMenu()
+	{
+		Application.LoadLevel ("menu");
+	}
 }
